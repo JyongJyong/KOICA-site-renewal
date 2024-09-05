@@ -6,6 +6,7 @@
 
 * a {
   text-decoration: none;
+  color: var(--sub_color2);
 }
 
 body {
@@ -26,10 +27,12 @@ body {
 
 header {
   width: 100%;
-  height: auto;
+  height: 150px;
+  position: fixed;
+  z-index: 999;
 }
 header #header_top {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 header #logo {
   float: left;
@@ -44,13 +47,19 @@ header #search_bar {
 header #search_bar .search input[type=text] {
   width: 100%;
   margin-top: 10px;
-  border: 2px solid var(--main_color);
+  border: 2px solid var(--sub_color2);
   border-radius: 20px;
   background: transparent;
   height: auto;
   line-height: normal;
   padding: 5px 20px 5px 20px;
   outline-style: none;
+}
+header #search_bar .search input[type=text]::-moz-placeholder {
+  color: var(--sub_color2);
+}
+header #search_bar .search input[type=text]::placeholder {
+  color: var(--sub_color2);
 }
 header #search_bar .search button[type=submit] {
   border: 0;
@@ -61,7 +70,7 @@ header #search_bar .search_btn {
   top: 16px;
   right: 15px;
   left: 228px;
-  color: var(--main_color);
+  color: var(--sub_color2);
 }
 header #top_menu {
   position: relative;
@@ -74,13 +83,14 @@ header #top_menu li {
   margin-right: 20px;
 }
 header #top_menu li a {
-  color: #030303;
+  color: var(--sub_color2);
 }
 header #top_menu li:last-child {
   margin-right: 0;
 }
 header #top_menu li:last-child::after {
   content: url("../images/header/eng_btn.png");
+  padding-left: 4px;
 }
 header #gnb {
   clear: both;
@@ -98,7 +108,7 @@ header #gnb li a {
   padding-bottom: 20px;
 }
 header #gnb li .menu_color {
-  color: var(--main_color);
+  color: var(--sub_color2);
 }
 header #gnb li:last-child {
   padding-right: 0;
@@ -108,9 +118,10 @@ header #gnb .sub {
   opacity: 0;
   position: absolute;
   width: 100%;
-  height: 200px;
   padding-top: 20px;
+  margin-top: 20px;
   transition: all 0.4s;
+  border-top: 1px solid #cecece;
 }
 header #gnb .sub li {
   float: none;
@@ -134,29 +145,106 @@ header #gnb:hover .sub {
 header #header_box {
   background-color: transparent;
   width: 100%;
-  height: 370px;
+  height: auto;
 }
 header #header_box.show {
   background-color: #fff;
   transition: all 0.2s;
 }
+header #header_box.show #top_menu li a {
+  color: var(--main_color);
+}
+header #header_box.show #gnb li .menu_color {
+  color: var(--main_color);
+}
+header #header_box.show .search input[type=text] {
+  border-color: var(--main_color);
+}
+header #header_box.show .search button[type=submit] {
+  color: var(--main_color);
+}
+header #header_box.show .search input[type=text]::-moz-placeholder {
+  color: var(--main_color);
+}
+header #header_box.show .search input[type=text]::placeholder {
+  color: var(--main_color);
+}
 header #header_box.height_change {
-  height: 200px;
+  height: 360px;
 }
 
-main #overseas_volunteer {
+#wrap {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.sec {
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  clear: both;
+}
+main #main_view .bg-video {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+main #main_view .bg-video_content {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #main_view h3 {
+  font-size: 42px;
+  color: #fff;
+  font-weight: bold;
+  left: calc(50% - 156px);
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  font-family: "iceJaram-Rg";
+}
+main #main_view h3::before {
+  content: url("../images/main_view/left.png");
+}
+main #main_view h3::after {
+  content: url("../images/main_view/right.png");
+}
+main #main_view span {
+  font-size: 23px;
+  color: #fff;
+  position: absolute;
+  left: calc(50% - 282px);
+  top: 52%;
+  text-align: center;
+  line-height: 30px;
+}
+main #section03 {
+  visibility: hidden;
+}
+main #section03 #overseas_volunteer {
   width: 100%;
 }
-main #overseas_volunteer .overseas_btn {
+main #section03 #overseas_volunteer .overseas_btn {
   width: 120px;
   height: 36px;
   display: inline-block;
   margin-right: 50px;
 }
-main #overseas_volunteer .overseas_btn input[type=radio] {
+main #section03 #overseas_volunteer .overseas_btn input[type=radio] {
   display: none;
 }
-main #overseas_volunteer .overseas_btn label {
+main #section03 #overseas_volunteer .overseas_btn label {
   display: block;
   border-radius: 10px;
   margin: 0 auto;
@@ -173,12 +261,111 @@ main #overseas_volunteer .overseas_btn label {
   color: var(--main_color);
   padding-right: 30px;
 }
-main #overseas_volunteer .overseas_btn input[type=radio]:checked + label {
+main #section03 #overseas_volunteer .overseas_btn input[type=radio]:checked + label {
   background: var(--main_color);
   color: var(--sub_color2);
 }
-main #overseas_volunteer .overseas_btn label:hover {
+main #section03 #overseas_volunteer .overseas_btn label:hover {
   border-color: var(--sub_color1);
   background: var(--sub_color1);
   color: var(--sub_color2);
+}
+
+footer {
+  width: 100%;
+  position: relative;
+}
+footer #footer_background {
+  height: 380px;
+  background: linear-gradient(var(--main_color) 75%, var(--sub_color2) 25%);
+  z-index: -1;
+}
+footer #footer_top_list {
+  float: left;
+  margin-top: 40px;
+}
+footer #footer_top_list li {
+  float: left;
+  padding-right: 45px;
+  font-size: 17px;
+}
+footer #footer_top_list li a {
+  color: var(--sub_color2);
+}
+footer #footer_top_list li:last-child {
+  padding-right: 0;
+}
+footer #footer_sns {
+  float: right;
+  margin-top: 20px;
+}
+footer #footer_sns li {
+  float: left;
+  color: var(--sub_color2);
+  padding-right: 14px;
+}
+footer #footer_sns li:last-child {
+  padding-right: 0;
+}
+footer #footer_logo {
+  clear: both;
+  float: left;
+  margin-top: 34px;
+}
+footer #copyright {
+  clear: both;
+  float: left;
+  margin-top: 18px;
+  color: var(--sub_color2);
+}
+footer #copyright li {
+  float: left;
+  padding-right: 18px;
+  padding-bottom: 6px;
+}
+footer #copyright p {
+  margin-bottom: 30px;
+}
+footer #footer_bottom {
+  width: 100%;
+}
+footer #footer_bottom #wa_mark {
+  clear: both;
+  float: right;
+}
+footer #footer_bottom #wa_mark li {
+  float: left;
+  margin-top: 25px;
+}
+footer #wrap {
+  transition-timing-function: linear !important;
+}
+footer #wrap .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pager {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.pager span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0.3;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.pager span.active {
+  opacity: 1;
 }

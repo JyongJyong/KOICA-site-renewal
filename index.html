@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/font.css"/>
-    
-    <script src="js/script.js"></script>
 
     <!--XICON 연결-->
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -39,7 +37,7 @@
                     </ul><!--end: #top_menu-->
                 </div>
 
-                <nav id="gnb" class="inner">
+                <nav id="gnb">
                     <ul>
                         <li><a href="#" class="menu_color">ODA 지식</a>
                             <div class="sub">
@@ -138,46 +136,131 @@
         </div>
     </header>
 
-    <!--메인
-    <main>
-        <section>
-            <div id="overseas_volunteer">
-                <h2>KOICA 해외봉사단</h2>
+    <!--메인-->
+    <div id="wrap">
+        <main class="container">
+            <section id="main_view" class="sec">
+                <div class="bg-video">
+                    <video class="bg-video_content" autoplay muted loop>
+                      <source src="images/main_video.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <h3>미래를 향한 작은 발걸음</h3>
+                <span>KOICA는 아이들이 행복하고 건강하게 자랄 수 있는 세상을 만듭니다.<br/>
+                  우리의 내일은 이들의 꿈 속에 있습니다.</span>
+            </section>
 
-                <div>
-                    <div class="overseas_btn">
-                        <input id="asia_btn" type="radio" name="country" value="asia" checked>
-                        <label for="asia_btn">아시아 <i class="xi-arrow-right"></i></label>
-                    </div>
+            <section id="section01" class="sec">
 
-                    <div class="overseas_btn">
-                        <input id="africa_btn" type="radio" name="country" value="africa">
-                        <label for="africa_btn">아프리카<i class="xi-arrow-right"></i></label>
-                    </div>
+            </section>
 
-                    <div class="overseas_btn">
-                        <input id="america_btn" type="radio" name="country" value="america">
-                        <label for="america_btn">중남미<i class="xi-arrow-right"></i></button></label>
-                    </div>
-                    
-                    <div class="overseas_btn">
-                        <input id="middleast_btn" type="radio" name="country" value="middleast">
-                        <label for="middleast_btn">중동<i class="xi-arrow-right"></i></label>
-                    </div>
-                    
-                    <div class="overseas_btn">
-                        <input id="eurasia" type="radio" name="country" value="eurasia">
-                        <label for="eurasia">유라시아<i class="xi-arrow-right"></i></label>
+            <section id="section03" class="sec">
+                <div id="overseas_volunteer">
+                    <h2>KOICA 해외봉사단</h2>
+    
+                    <div>
+                        <div class="overseas_btn">
+                            <input id="asia_btn" type="radio" name="country" value="asia" checked>
+                            <label for="asia_btn">아시아 <i class="xi-arrow-right"></i></label>
+                        </div>
+    
+                        <div class="overseas_btn">
+                            <input id="africa_btn" type="radio" name="country" value="africa">
+                            <label for="africa_btn">아프리카<i class="xi-arrow-right"></i></label>
+                        </div>
+    
+                        <div class="overseas_btn">
+                            <input id="america_btn" type="radio" name="country" value="america">
+                            <label for="america_btn">중남미<i class="xi-arrow-right"></i></button></label>
+                        </div>
+                        
+                        <div class="overseas_btn">
+                            <input id="middleast_btn" type="radio" name="country" value="middleast">
+                            <label for="middleast_btn">중동<i class="xi-arrow-right"></i></label>
+                        </div>
+                        
+                        <div class="overseas_btn">
+                            <input id="eurasia" type="radio" name="country" value="eurasia">
+                            <label for="eurasia">유라시아<i class="xi-arrow-right"></i></label>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    -->
+            </section>
+        </main>
+        <div class="pager"></div>
+    </div>
 
     <!--푸터-->
     <footer>
-        
+        <div id="footer_background">
+            <div id="footer_top" class="inner">
+                <div id="footer_top_list">
+                    <ul>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">책임의 한계 및 법적고지</a></li>
+                        <li><a href="#">이메일주소 무단수집거부</a></li>
+                    </ul>
+                </div>
+                    
+                <nav id="footer_sns">
+                    <ul>
+                        <li><a href="#" target="_blank"><i class="xi-instagram xi-2x"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="xi-naver-square xi-2x"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="xi-facebook-official xi-2x"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="xi-youtube-play xi-2x"></i></a></li>
+                    </ul>
+                </nav>
+
+                <div id="footer_logo">
+                    <p><img src="images/footer/f_logo.png"></p>
+                </div>
+
+                <div id="copyright">
+                    <ul>
+                        <li>13449 경기도 성남시 수정구 대왕판교로 825 한국국제협력단</li>
+                        <li>사업자등록번호: 208-82-03816</li>
+                        <li>TEL: 1588-0434</li>
+                        <li>FAX: 031&#41;740-0260</li>
+                    </ul>
+                    <p>COPYRIGHT&#169; KOREA INTERNATIONAL COOPERATION AGENCY ALL RIGHTS RESERVED.</p>
+                    <p>
+                        본 홈페이지에 게시된 이메일주소 자동수집을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.<br/>
+                        본 사이트는 장애인들의 사용 편의성을 위해 “웹접근성지침”을 준수하고 있습니다.
+                    </p>
+                </div>
+            </div><!--end: #footer_top-->
+
+            <div id="footer_bottom" class="inner">
+                <div id="banner" dir="ltr">
+                    <ul class="wrap">
+                        <li class="item"><a href="#"><img src="images/footer/banner1.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner2.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner3.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner4.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner5.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner6.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner7.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner8.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner9.png"/></a></li>
+                        <li class="item"><a href="#"><img src="images/footer/banner10.png"/></a></li>
+                    </ul>
+                </div>
+
+                <div id="wa_mark">
+                    <ul>
+                        <li><img src="images/footer/WAmark.png" alt="웹접근성인증마크"/></li>
+                        <li><img src="images/footer/IASmark.png" alt="IAS 인증마크"/></li>
+                    </ul>
+                </div>
+            </div><!--end: #footer_bottom-->
+        </div>
     </footer>
+
+    
+    <!--Swiper 호출-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--플러그인 호출-->   
+    <script src="js/script.js"></script>
 </body>
 </html>
