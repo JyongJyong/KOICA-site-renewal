@@ -5,18 +5,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOICA</title>
 
-    <link href="css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    
+    <script src="js/script.js"></script>
+
+    <!--XICON 연결-->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
 <body>
     <!--헤더-->
-    <header>
+    <header class="clearfix">
+        <div id="header_box">
+            <div id="header_top" class="inner">
+                <div id="logo">
+                    <h1><a href="#"><img src="images/header/logo.png" alt="KOICA"></a></h1>
+                </div><!--end: #logo-->
+    
+                <div id="search_bar">
+                    <form class="search" action="" method="get">
+                        <input class="search_text" type="text" name="" placeholder="원하시는 정보를 입력해 주세요."/>
+                        <button class="search_btn" type="submit"><i class="xi-search xi-1x"></i></button>
+                    </form><!--end: .search_bar-->
+                </div>
+    
+                <div id="top_menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">ENG</a></li>
+                    </ul><!--end: #top_menu-->
+                </div>
 
+                <nav id="gnb" class="inner">
+                    <ul>
+                        <li><a href="#" class="menu_color">ODA 지식</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="#">KOICA 오픈데이터포털</a></li>
+                                    <li><a href="#">ODA 도서관</a></li>
+                                    <li><a href="#">국제개발협력 용어집</a></li>
+                                    <li><a href="#">지식서비스</a></li>
+                                    <li><a href="#">개발협력동향</a></li>
+                                    <li><a href="#">연구보고서</a></li>
+                                    <li><a href="#">ODA연구 알리미</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li><a href="#" class="menu_color">주요사업</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="#">사업전략 및 정책</a></li>
+                                    <li><a href="#">추진방향</a></li>
+                                    <li><a href="#">추진실적</a></li>
+                                    <li><a href="#">분야별 지원현황</a></li>
+                                    <li><a href="#">지역별 지원현황</a></li>
+                                    <li><a href="#">형태별 지원현황</a></li>
+                                    <li><a href="#">사업평가</a></li>
+                                    <li><a href="#">ABC 프로그램</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li><a href="#" class="menu_color">국민참여·일자리</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="#">전체일정</a></li>
+                                    <li><a href="#">기관공모</a></li>
+                                    <li><a href="#">입찰정보</a></li>
+                                    <li><a href="#">개발협력 일자리</a></li>
+                                    <li><a href="#">행사</a></li>
+                                    <li><a href="#">교육 및 자격시험</a></li>
+                                    <li><a href="#">유관기관공지</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li><a href="#" class="menu_color">알람·홍보</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">KOICA 보도자료</a></li>
+                                    <li><a href="#">해외 ODA 활동</a></li>
+                                    <li><a href="#">해외 ODA 사진</a></li>
+                                    <li><a href="#">홍보자료</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li><a href="#" class="menu_color">고객과 통(通)</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="#">고객의 소리</a></li>
+                                    <li><a href="#">국민제안방</a></li>
+                                    <li><a href="#">기업성장응답센터</a></li>
+                                    <li><a href="#">고객신고</a></li>
+                                    <li><a href="#">설문조사</a></li>
+                                    <li><a href="#">KOICA 견학</a></li>
+                                    <li><a href="#">편의시설 이용신청</a></li>
+                                    <li><a href="#">제증명서 발급센터</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li><a href="#" class="menu_color">정보공개</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="#">정보공개 제도 및 청구</a></li>
+                                    <li><a href="#">정보목록</a></li>
+                                    <li><a href="#">사전정보공표</a></li>
+                                    <li><a href="#">공공 정보 개방</a></li>
+                                    <li><a href="#">사업실명제</a></li>
+                                    <li><a href="#">예결산 현황</a></li>
+                                    <li><a href="#">기타공개</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li><a href="#" class="menu_color">KOICA 소개</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="#">KOICA</a></li>
+                                    <li><a href="#">인권경영</a></li>
+                                    <li><a href="#">ESG 경영</a></li>
+                                    <li><a href="#">윤리준법경영</a></li>
+                                    <li><a href="#">고객만족경영</a></li>
+                                    <li><a href="#">안전경영</a></li>
+                                    <li><a href="#">경영공시</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                    </ul>
+                </nav><!--end: #gnb-->
+            </div>
+        </div>
     </header>
 
-    <!--메인-->
+    <!--메인
     <main>
+        <section>
+            <div id="overseas_volunteer">
+                <h2>KOICA 해외봉사단</h2>
 
+                <div>
+                    <div class="overseas_btn">
+                        <input id="asia_btn" type="radio" name="country" value="asia" checked>
+                        <label for="asia_btn">아시아 <i class="xi-arrow-right"></i></label>
+                    </div>
+
+                    <div class="overseas_btn">
+                        <input id="africa_btn" type="radio" name="country" value="africa">
+                        <label for="africa_btn">아프리카<i class="xi-arrow-right"></i></label>
+                    </div>
+
+                    <div class="overseas_btn">
+                        <input id="america_btn" type="radio" name="country" value="america">
+                        <label for="america_btn">중남미<i class="xi-arrow-right"></i></button></label>
+                    </div>
+                    
+                    <div class="overseas_btn">
+                        <input id="middleast_btn" type="radio" name="country" value="middleast">
+                        <label for="middleast_btn">중동<i class="xi-arrow-right"></i></label>
+                    </div>
+                    
+                    <div class="overseas_btn">
+                        <input id="eurasia" type="radio" name="country" value="eurasia">
+                        <label for="eurasia">유라시아<i class="xi-arrow-right"></i></label>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    -->
 
     <!--푸터-->
     <footer>
