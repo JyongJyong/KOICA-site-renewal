@@ -15,9 +15,9 @@ body{font-family: 'Pretendard-Regular';}
 header{
     width: 100%; height: 150px; position: fixed; z-index: 999;
 
-    #header_top{padding-top: 20px;}
+    #header_top{padding-top: 24px;}
 
-    #logo{float: left; margin-right: 50px; margin-bottom: 46px;}
+    #logo{float: left; margin-right: 50px; margin-bottom: 46px; margin-top: 5px;}
     #search_bar{
         position: relative;  float: left; 
         width: 220px;
@@ -27,6 +27,7 @@ header{
             border: 2px solid var(--sub_color2); border-radius: 20px; background: transparent;
             height: auto; line-height: normal; padding: 5px 20px 5px 20px;
             outline-style: none; // 포커스 시 발생하는 효과 제거
+            color: var(--sub_color2);
         }
         .search input[type=text]::placeholder{color: var(--sub_color2);}
 
@@ -42,19 +43,22 @@ header{
     }
 
     #top_menu{
-        position: relative; display: flex; float: right; margin-top: 28px;
+        position: relative; display: flex; float: right; margin-top: 24px;
         li{float: left; margin-right: 20px; a{color: var(--sub_color2);}}
         li:last-child{margin-right: 0;}
-        li:last-child::after{content: url("../images/header/eng_btn.png"); padding-left: 4px;}
+        li:last-child::after{content: url("../images/header/eng_btn_w.png"); padding-left: 4px;}
+
+        li:hover{a{color: var(--main_color);}}
+        li:last-child:hover::after{content: url("../images/header/eng_btn.png");}
     }
 
     #gnb{
         clear: both;
-        position: relative; float: left;
+        position: relative; float: left; margin-top: -18px;
 
         li{
-            float: left; padding-right: 183px;
-            a{font-size: 20px; color: #030303; padding-top: 20px; padding-bottom: 20px;}
+            float: left; padding-right: 183px; 
+            a{font-size: 20px; color: #030303; padding-top: 20px; padding-bottom: 20px; font-weight: bold;}
 
             .menu_color{
                 color: var(--sub_color2);
@@ -68,8 +72,8 @@ header{
             transition: all .4s;
             border-top: 1px solid #cecece;
 
-            li{float: none; padding-bottom: 4px;}
-            a{font-size: 16px; white-space: nowrap; color: #030303;}
+            li{float: none; padding-bottom: 16px;}
+            a{font-size: 16px; white-space: nowrap; color: #030303; font-weight: normal;}
             a::after{display: none;}
             a:hover{color: var(--main_color);}
         }
@@ -89,8 +93,32 @@ header{
         .search input[type=text]{border-color: var(--main_color);}
         .search button[type=submit]{color: var(--main_color);}
         .search input[type=text]::placeholder{color: var(--main_color);}
+
+        #logo{content: url("../images/header/logo.png");}
+
+        #top_menu{
+            li:last-child::after{content: url("../images/header/eng_btn.png");}
+        }
     }
-    #header_box.height_change{height: 360px;}
+    #header_box.height_change{height: 440px;}
+
+    
+    &.view1, &.view2{
+        #logo{content: url("../images/header/logo.png");}
+
+        #header_box{
+            #top_menu{li{a{color: var(--main_color);}}}
+            #gnb li{.menu_color{color: var(--main_color);}}
+
+            .search input[type=text]{border-color: var(--main_color);}
+            .search button[type=submit]{color: var(--main_color);}
+            .search input[type=text]::placeholder{color: var(--main_color);}
+        }
+
+        #top_menu{               
+            li:last-child::after{content: url("../images/header/eng_btn.png");}
+        }
+    }
 }
 
 #wrap{width: 100%; height: 100vh; overflow: hidden; position: relative;}
@@ -100,6 +128,7 @@ main{
     width: 100%; height: 100vh;
 
     #main_view{
+        width: 100%; height: 100%;
         .bg-video{
             width: 100%; height: 100vh;
             position: relative; top: 0; left: 0; z-index: -1;
@@ -109,23 +138,41 @@ main{
             height: 100%;
             width: 100%;
             object-fit: cover; // background-size: cover 와 비슷함. (HTML 요소 or 비디오와 작동)
-            
         }
 
         h3{
-            font-size: 42px; color: #fff;font-weight: bold; left: calc(50% - 156px);
+            font-size: 66px; color: #fff;font-weight: bold; left: calc(50% - 204px);
             position: absolute; top: 45%; text-align: center; font-family: 'iceJaram-Rg';
         }
         h3::before{
-            content: url("../images/main_view/left.png");
+            content: ""; background: url("../images/main_view/left.png") no-repeat; 
+            position: absolute; width: 9%; height: 60%; left: -12%; top: -12%;
         }
-        h3::after{content: url("../images/main_view/right.png");}
+        h3::after{
+            content: ""; background: url("../images/main_view/right.png") no-repeat;
+            position: absolute; width: 10%; height: 60%; left: 107%; top: -12%;
+        }
         span{
             font-size: 23px; color: #fff; position: absolute; left: calc(50% - 282px);
             top: 52%; text-align: center; line-height: 30px;
         }
 
-
+        #scroll{
+            z-index: 2;
+            position: absolute; bottom: 8%; left: 50%; border: 3px solid #fff;
+            padding: 31px 11px 16px; border-radius: 41px;
+        }
+        #scroll p{animation: scroll_ani .8s linear infinite;}
+        @keyframes scroll_ani{
+        0%{
+            transform: translateY(11px);
+        }
+        80%{
+            transform: translateY(5px);
+        }
+        100%{
+            transform: translateY(10px);
+        }
     }
 
     #section03{
@@ -162,15 +209,15 @@ main{
             }
         }
     }
-
     clear: both;
+    }
 }
 
 footer{
     width: 100%; position: relative;
 
     #footer_background{
-        height: 380px; background: linear-gradient( var(--main_color) 75%, var(--sub_color2) 25%); z-index: -1;
+        height: 400px; background: linear-gradient( var(--main_color) 75%, var(--sub_color2) 25%); z-index: -1;
     }
 
     #footer_top_list{
@@ -197,17 +244,24 @@ footer{
 
     #footer_bottom{
         width: 100%;
-
-        #wa_mark{
-            clear: both;
-            float: right;
-            li{float: left; margin-top: 25px;}
-        }
+        clear: both; padding-top: 50px;
     }
 
-    #wrap{
-        transition-timing-function: linear !important;
-        .item img{display: block; width: 100%; height: 100%; object-fit: cover;}
+    #banner{display: flex; width: 60%; height: 100%; overflow: hidden;}
+
+    .wrap{      
+        //transition-timing-function: linear !important;
+        display: flex; width: 100%; height: 100%;
+    }
+
+    .item{
+        justify-content: space-between; flex-shrink: 0;
+    }
+
+    #wa_mark{
+        position: absolute; top: 81%; right: 290px;
+        li{padding-right: 40px; float: left;}
+        li:last-child{padding-right: 0;}
     }
 }
 

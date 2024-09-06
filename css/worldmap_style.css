@@ -1,7 +1,40 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrap {
+  max-width: 1561px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#info_box {
+  width: 201px;
+  height: 157px;
+  position: absolute;
+  background: url("../images/nara_btn.png");
+  transform: translate(-50%, -100%);
+}
+
+.country_name {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-left: 10px;
+=======
 #worldmap {
   width: 100%;
   height: 100vh;
 }
+=======
+#worldmap {
+  width: 100%;
+  height: 100vh;
+}
+>>>>>>> 2b64e1d8e10e5dc1f5cccfe59180099307f8d95e
 #worldmap #world_info {
   position: relative;
 }
@@ -36,4 +69,8 @@
 }
 #worldmap #guatemala:hover {
   fill: #f41e1e;
+<<<<<<< HEAD
+>>>>>>> 2b64e1d8e10e5dc1f5cccfe59180099307f8d95e
+=======
+>>>>>>> 2b64e1d8e10e5dc1f5cccfe59180099307f8d95e
 }
