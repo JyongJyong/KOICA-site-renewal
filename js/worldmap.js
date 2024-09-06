@@ -2,7 +2,10 @@ window.addEventListener("load",function(){
 	var btns = document.querySelectorAll(".cls-2");
 	var box = document.querySelector("#info_box");
 	var name = box.querySelector(".country_name");
+	var address = box.querySelector(".address");
+	var phone = box.querySelector(".phone_number");
 	var fax = box.querySelector(".fax_number");
+	var email = box.querySelector(".email");
 	var timer;
 
 
@@ -18,16 +21,17 @@ window.addEventListener("load",function(){
 			console.log(btn_X+"/"+btn_Y);
 
 			name.innerHTML = btn.dataset.name;
+			address.innerHTML = btn.dataset.address;
+			phone.innerHTML = btn.dataset.phone;
 			fax.innerHTML = btn.dataset.fax;
-
-			console.log(btn.dataset.name);			
+			email.innerHTML = email.dataset.email;			
 
 			clearTimeout(timer);
 		});
 		btn.addEventListener("mouseout",function(){
 			timer = setTimeout(function(){
 				box.style.display = "none";
-			},2000);
+			},300);
 		});
 	});
 });

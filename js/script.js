@@ -18,7 +18,6 @@ var header = document.getElementsByTagName("header")[0];
 var prevClass = null;
 var activeClass = null;
 
-/*
 let full_page_swiper = new Swiper("#wrap",{
     wrapperClass: 'container',
     slideClass: 'sec',
@@ -48,18 +47,20 @@ let full_page_swiper = new Swiper("#wrap",{
         }
     },
 });
-*/
 
-let full_page_swiper = new Swiper("#banner",{
+
+let banner_swiper = new Swiper("#banner",{
     wrapperClass: 'wrap',
     slideClass: 'item',
 
+    
     autoplay: {
         delay: 0, //add
         disableOnInteraction: false,
     },
-    speed: 5000,
+    speed: 4000,
     loop: true,
+    
     loopAdditionalSlides: 1,
     slidesPerView: 5,
     centeredSlides: false,
