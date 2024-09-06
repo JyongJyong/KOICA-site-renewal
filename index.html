@@ -21,10 +21,10 @@
                     <h1><a href="#"><img src="images/header/logo_w.png" alt="KOICA"></a></h1>
                 </div><!--end: #logo-->
     
-                <div id="search_bar">
+                <div class="search_bar">
                     <form class="search" action="" method="get">
-                        <input class="search_text" type="text" name="" placeholder="원하시는 정보를 입력해 주세요." maxlength="15"/>
-                        <button class="search_btn" type="submit"><i class="xi-search xi-1x"></i></button>
+                        <input class="search_text" type="text" name="" placeholder="원하시는 정보를 입력해 주세요."/>
+                        <button class="search_btn" type="submit"><image src="images/header/search_w.png"/></button>
                     </form><!--end: .search_bar-->
                 </div>
     
@@ -154,10 +154,23 @@
                 <div id="scroll"><p><img src="images/main_view/scroll_btn.png" alt=""/></p></div>
             </section><!--end: #main_view-->
 
-            <section id="section02" class="sec">
+            <section id="section02" class="sec inner">
+                <div id="map_info">
+                    <p>KOICA 해외사무소 지도</p>
+                    <p>지도의 점을 클릭하면 해당 나라의 사이트로 접속이 가능합니다.</p>
+                </div>
+                <div class="search_bar">
+                    <form class="search" action="" method="get">
+                        <input class="search_text" type="text" name="" placeholder="원하시는 정보를 입력해 주세요." maxlength="15"/>
+                        <button class="search_btn" type="submit"><i class="xi-search xi-1x"></i></button>
+                    </form><!--end: .search_bar-->
+                </div>
+                <div id="worldmap_load">
+                    <iframe src="worldmap.html" width="1800" height="1800"></iframe>
+                </div>
+            </section><!--end: #section02-->
 
-            </section>
-
+            <!--
             <section id="section03" class="sec">
                 <div id="overseas_volunteer">
                     <h2>KOICA 해외봉사단</h2>
@@ -190,6 +203,7 @@
                     </div>
                 </div>
             </section>
+            -->
         </main>
         <div class="pager"></div>
     </div>
@@ -251,7 +265,7 @@
                 </div>
 
                 <div id="wa_mark">
-                    <ul>
+                    <ul class="mark_position">
                         <li><img src="images/footer/WAmark.png" alt="웹접근성인증마크"/></li>
                         <li><img src="images/footer/IASmark.png" alt="IAS 인증마크"/></li>
                     </ul>

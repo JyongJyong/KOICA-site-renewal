@@ -25,11 +25,49 @@ body {
   display: block;
 }
 
+.search_bar {
+  position: relative;
+  float: left;
+  border: 2px solid var(--sub_color2);
+  border-radius: 20px;
+  margin-top: 4px;
+}
+.search_bar .search input[type=text] {
+  width: 380px;
+  background: transparent;
+  border: 0;
+  height: auto;
+  line-height: normal;
+  padding: 10px 0px 10px 22px;
+  outline-style: none;
+  color: var(--sub_color2);
+}
+.search_bar .search input[type=text]::-moz-placeholder {
+  color: var(--sub_color2);
+  font-size: 13px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.search_bar .search input[type=text]::placeholder {
+  color: var(--sub_color2);
+  font-size: 13px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.search_bar .search button[type=submit] {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
 header {
   width: 100%;
   height: 150px;
   position: fixed;
   z-index: 999;
+  clear: both;
 }
 header #header_top {
   padding-top: 24px;
@@ -39,40 +77,6 @@ header #logo {
   margin-right: 50px;
   margin-bottom: 46px;
   margin-top: 5px;
-}
-header #search_bar {
-  position: relative;
-  float: left;
-  width: 220px;
-}
-header #search_bar .search input[type=text] {
-  width: 100%;
-  margin-top: 10px;
-  border: 2px solid var(--sub_color2);
-  border-radius: 20px;
-  background: transparent;
-  height: auto;
-  line-height: normal;
-  padding: 5px 20px 5px 20px;
-  outline-style: none;
-  color: var(--sub_color2);
-}
-header #search_bar .search input[type=text]::-moz-placeholder {
-  color: var(--sub_color2);
-}
-header #search_bar .search input[type=text]::placeholder {
-  color: var(--sub_color2);
-}
-header #search_bar .search button[type=submit] {
-  border: 0;
-  background-color: transparent;
-}
-header #search_bar .search_btn {
-  position: absolute;
-  top: 16px;
-  right: 15px;
-  left: 228px;
-  color: var(--sub_color2);
 }
 header #top_menu {
   position: relative;
@@ -101,7 +105,6 @@ header #top_menu li:last-child:hover::after {
   content: url("../images/header/eng_btn.png");
 }
 header #gnb {
-  clear: both;
   position: relative;
   float: left;
   margin-top: -18px;
@@ -168,11 +171,14 @@ header #header_box.show #top_menu li a {
 header #header_box.show #gnb li .menu_color {
   color: var(--main_color);
 }
+header #header_box.show .search_bar {
+  border-color: var(--main_color);
+}
 header #header_box.show .search input[type=text] {
   border-color: var(--main_color);
 }
 header #header_box.show .search button[type=submit] {
-  color: var(--main_color);
+  content: url("../images/header/search.png");
 }
 header #header_box.show .search input[type=text]::-moz-placeholder {
   color: var(--main_color);
@@ -180,7 +186,7 @@ header #header_box.show .search input[type=text]::-moz-placeholder {
 header #header_box.show .search input[type=text]::placeholder {
   color: var(--main_color);
 }
-header #header_box.show #logo {
+header #header_box.show #logo img {
   content: url("../images/header/logo.png");
 }
 header #header_box.show #top_menu li:last-child::after {
@@ -192,11 +198,35 @@ header #header_box.height_change {
 header.view1 #logo, header.view2 #logo {
   content: url("../images/header/logo.png");
 }
+header.view1 .search_bar, header.view2 .search_bar {
+  display: none;
+}
+header.view1 #top_menu, header.view2 #top_menu {
+  display: none;
+}
+header.view1 #header_box, header.view2 #header_box {
+  height: 100px;
+  box-shadow: 2px 3px 4px rgba(206, 206, 206, 0.5);
+  background: #fff;
+}
 header.view1 #header_box #top_menu li a, header.view2 #header_box #top_menu li a {
   color: var(--main_color);
 }
+header.view1 #header_box #gnb li, header.view2 #header_box #gnb li {
+  padding-right: 125px;
+}
 header.view1 #header_box #gnb li .menu_color, header.view2 #header_box #gnb li .menu_color {
   color: var(--main_color);
+}
+header.view1 #header_box #gnb li:first-child, header.view2 #header_box #gnb li:first-child {
+  padding-left: 45px;
+}
+header.view1 #header_box #gnb, header.view2 #header_box #gnb {
+  margin-top: 16px;
+}
+header.view1 #header_box .sub, header.view2 #header_box .sub {
+  border: 0;
+  display: none;
 }
 header.view1 #header_box .search input[type=text], header.view2 #header_box .search input[type=text] {
   border-color: var(--main_color);
@@ -309,22 +339,40 @@ main #main_view #scroll p {
     transform: translateY(10px);
   }
 }
-main #main_view #section03 {
+main #section02 #map_info {
+  margin-top: 150px;
+}
+main #section02 .search_bar {
+  float: right;
+}
+main #section02 .search_bar .search input[type=text] {
+  border-color: var(--main_color);
+}
+main #section02 .search_bar .search button[type=submit] {
+  color: var(--main_color);
+}
+main #section02 .search_bar .search input[type=text]::-moz-placeholder {
+  color: var(--main_color);
+}
+main #section02 .search_bar .search input[type=text]::placeholder {
+  color: var(--main_color);
+}
+main #section03 {
   visibility: hidden;
 }
-main #main_view #section03 #overseas_volunteer {
+main #section03 #overseas_volunteer {
   width: 100%;
 }
-main #main_view #section03 #overseas_volunteer .overseas_btn {
+main #section03 #overseas_volunteer .overseas_btn {
   width: 120px;
   height: 36px;
   display: inline-block;
   margin-right: 50px;
 }
-main #main_view #section03 #overseas_volunteer .overseas_btn input[type=radio] {
+main #section03 #overseas_volunteer .overseas_btn input[type=radio] {
   display: none;
 }
-main #main_view #section03 #overseas_volunteer .overseas_btn label {
+main #section03 #overseas_volunteer .overseas_btn label {
   display: block;
   border-radius: 10px;
   margin: 0 auto;
@@ -341,11 +389,11 @@ main #main_view #section03 #overseas_volunteer .overseas_btn label {
   color: var(--main_color);
   padding-right: 30px;
 }
-main #main_view #section03 #overseas_volunteer .overseas_btn input[type=radio]:checked + label {
+main #section03 #overseas_volunteer .overseas_btn input[type=radio]:checked + label {
   background: var(--main_color);
   color: var(--sub_color2);
 }
-main #main_view #section03 #overseas_volunteer .overseas_btn label:hover {
+main #section03 #overseas_volunteer .overseas_btn label:hover {
   border-color: var(--sub_color1);
   background: var(--sub_color1);
   color: var(--sub_color2);
@@ -356,8 +404,8 @@ footer {
   position: relative;
 }
 footer #footer_background {
-  height: 400px;
-  background: linear-gradient(var(--main_color) 75%, var(--sub_color2) 25%);
+  height: 420px;
+  background: linear-gradient(var(--main_color) 80%, var(--sub_color2) 20%);
   z-index: -1;
 }
 footer #footer_top_list {
@@ -367,7 +415,7 @@ footer #footer_top_list {
 footer #footer_top_list li {
   float: left;
   padding-right: 45px;
-  font-size: 17px;
+  font-size: 19px;
 }
 footer #footer_top_list li a {
   color: var(--sub_color2);
@@ -391,6 +439,7 @@ footer #footer_logo {
   clear: both;
   float: left;
   margin-top: 34px;
+  margin-bottom: 34px;
 }
 footer #copyright {
   clear: both;
@@ -406,10 +455,17 @@ footer #copyright li {
 footer #copyright p {
   margin-bottom: 30px;
 }
+footer #copyright p:last-child {
+  font-size: 12px;
+  opacity: 0.8;
+  line-height: 20px;
+}
 footer #footer_bottom {
   width: 100%;
   clear: both;
-  padding-top: 50px;
+  padding-top: 26px;
+  display: flex;
+  justify-content: space-between;
 }
 footer #banner {
   display: flex;
@@ -425,11 +481,6 @@ footer .wrap {
 footer .item {
   justify-content: space-between;
   flex-shrink: 0;
-}
-footer #wa_mark {
-  position: absolute;
-  top: 81%;
-  right: 290px;
 }
 footer #wa_mark li {
   padding-right: 40px;
