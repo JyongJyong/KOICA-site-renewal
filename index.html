@@ -154,21 +154,91 @@
                 <div id="scroll"><p><img src="images/main_view/scroll_btn.png" alt=""/></p></div>
             </section><!--end: #main_view-->
 
-            <section id="section02" class="sec inner">
-                <div id="map_info">
-                    <p>KOICA 해외사무소 지도</p>
-                    <p>지도의 점을 클릭하면 해당 나라의 사이트로 접속이 가능합니다.</p>
-                </div>
-                <div class="search_bar">
-                    <form class="search" action="" method="get">
-                        <input class="search_text" type="text" name="" placeholder="원하시는 정보를 입력해 주세요." maxlength="15"/>
-                        <button class="search_btn" type="submit"><i class="xi-search xi-1x"></i></button>
-                    </form><!--end: .search_bar-->
+            <!--SECTION 01-->
+            <section id="section01" class="sec inner">
+                <div id="map_info_position">
+                    <div id="map_info">
+                        <p>KOICA 해외사무소 지도</p>
+                        <p>지도의 점을 클릭하면 해당 나라의 사이트로 접속이 가능합니다.</p>
+                    </div>
+                    <div class="search_bar">
+                        <form class="search" action="" method="get">
+                            <input class="search_text" type="text" name="" placeholder="원하시는 정보를 입력해 주세요." maxlength="15"/>
+                            <button class="search_btn" type="submit"><img src="images/header/search.png"/></button>
+                        </form><!--end: .search_bar-->
+                    </div>
                 </div>
                 <div id="worldmap_load">
-                    <iframe src="worldmap.html" width="1800" height="1800"></iframe>
+                    <iframe id="map" src="worldmap.html" width="1800" height="1800"></iframe>
                 </div>
-            </section><!--end: #section02-->
+            </section><!--end: #section01-->
+
+            <!--SECTION 02-->
+            <section id="section02" class="sec inner">
+                <div id="koica_info">
+                    <p id="koica_head_bottom">우리 KOICA는 국제 사회의 <span>평화와 번영</span>을 생각합니다.</p>
+                    <div id="koica_swiper">
+                        <ul class="koica_wrap">
+                            <li class="koica_info_img wrapper">
+                                <img src="images/section02/image1.jpg" alt=""/>
+                                <div class="koica_info_text">
+                                    <p>개발도상국의 빈곤 감소 및 삶의 질 향상</p>
+                                    <p>
+                                        KOICA는 약 174개의 국가에 무상원조를 하였으며,<br/>
+                                        개발도상국이 제 2의 한국이 되어 더욱 더 도약할 수 있도록 발빠르게 움직이고 있습니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="koica_info_img">
+                                <img src="images/section02/image3.jpg" alt=""/>
+                                <div class="koica_info_text">
+                                    <p>여성, 아동, 장애인, 청소년의 인권향상</p>
+                                    <p>
+                                        KOICA는 여성, 아동, 장애인, 청소년 등의<br/>
+                                        사회적 약자를 위해 발벗고 나서고 있습니다.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=".swiper-pagination"></div>
+                </div>
+
+                <div id="koica_info2">
+                    <div class="koica_info_etc">
+                        <div id="open_data_info">
+                            <div class="character ch01"><img src="images/section02/ca1.png"/></div>
+                            <div class="koica_move">
+                                <div class="koica_move_position">
+                                    <p>국가별 지원현황을 알고 싶으신가요?</p>
+                                    <button class="move_btn1"><a href="#"><span>KOICA 오픈데이터포털 바로가기</span></a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="overseas_volunteer_info">
+                            <div class="character ch02"><img src="images/section02/ca2.png"/></div>
+                            <div class="koica_move">
+                                <div class="koica_move_position">
+                                    <p>KOICA 해외 봉사단에 관심이 있으신가요?</p>
+                                    <button class="move_btn2"><a href="#"><span>KOICA 해외 봉사단 바로가기</span></a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="oda_info">
+                            <div class="character ch03"><img src="images/section02/ca3.png"/></div>
+                            <div class="koica_move">
+                                <div class="koica_move_position">
+                                    <p>ODA 자격증에 대해 알고 싶으신가요?</p>
+                                    <button class="move_btn3"><a href="#"><span>KOICA ODA 교육원 바로가기</span></a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <!--
             <section id="section03" class="sec">

@@ -93,7 +93,7 @@ header{
         #gnb li{.menu_color{color: var(--main_color);}}
 
         .search_bar{border-color: var(--main_color);}
-        .search input[type=text]{border-color: var(--main_color);}
+        .search input[type=text]{border-color: var(--main_color); color: var(--main_color)} // 2024-09-07 color 추가
         .search button[type=submit]{content: url("../images/header/search.png");}
         .search input[type=text]::placeholder{color: var(--main_color);}
 
@@ -118,7 +118,7 @@ header{
             background: #fff;
 
             #top_menu{li{a{color: var(--main_color);}}}
-            #gnb li{.menu_color{color: var(--main_color);} padding-right: 125px;}
+            #gnb li{.menu_color{color: #000;} padding-right: 125px;}
             #gnb li:first-child{padding-left: 45px;}
             #gnb{margin-top: 16px;}
 
@@ -196,18 +196,103 @@ main{
     clear: both;
     }
 
-    // 2번째 페이지
-    #section02{
-        #map_info{
-            margin-top: 150px;
+    // 2번째 페이지 - 첫번째 section
+    #section01{
+        width: 100%; height: 100%;
+
+        #map_info_position{
+            margin-top: 140px;
+            padding-bottom: 95px;
+            #map_info{
+                float: left;
+                p{color: var(--main_color);}
+                p:first-child{font-size: 25px;}
+                p:first-child::before{content: ""; background: url("../images/section01/airplane.png") no-repeat; background-size: 25px 25px;}
+                p:last-child{font-size: 20px;}
+            }
+    
+            .search_bar{
+                float: right;
+                .search input[type=text]{border: 2px solid var(--main_color); border-radius: 20px; font-size: 15px;}
+                .search button[type=submit]{color: var(--main_color); position: absolute; top: 5px; right: 10px;}
+                .search input[type=text]::placeholder{color: var(--main_color);}
+            }
         }
 
-        .search_bar{
-            float: right;
-            .search input[type=text]{border-color: var(--main_color);}
-            .search button[type=submit]{color: var(--main_color);}
-            .search input[type=text]::placeholder{color: var(--main_color);}
+        #worldmap_load{position: relative; width: 100%; padding-bottom: 56.25%;}
+        #map{position: absolute; width: 100%; height: 100%;}
+    }
 
+    // 3번째 페이지 - 두번째 section
+    #section02{
+        width: 100%; height: 100%; margin-top: 48px;;
+        #koica_info{
+            //margin-top: 140px;
+            p{font-size: 30px; color: #4E4E4E; font-weight: bold;}
+            span{color: var(--main_color);}
+
+            #koica_head_bottom{
+                margin-bottom: 20px;;
+            }
+
+            #koica_swiper{
+                width: 1724px; height: 410px; overflow: hidden;
+            }
+
+            .koica_info_img{
+                position: relative;
+                transform: translate3d(0, 0, 0) !important;
+                transition: all .4s;
+                img{width: 1724px; height: 410px; border-radius: 20px; object-fit: cover;}
+            }
+
+            .wrapper{display: flex;}
+                
+            .koica_info_text{
+                position: absolute; left: 2%; top: 66%; z-index: 1;
+                p{font-size: 30px; color: var(--sub_color2);}
+                p:last-child{font-size: 23px; font-weight: normal; padding-top: 30px;}
+            }
+        }
+
+        #koica_info2{
+            margin-top: 70px; width: 100%; height: 100%;
+            .character{z-index: -1; transition: all .4s;}
+            .ch01.move, .ch02.move, .ch03.move{transform: translateY(-20px);}
+            .koica_info_etc{
+                position: relative; display: flex;
+                .koica_move{
+                    position: absolute; top: 1px; flex-shrink: 0;
+                    width: 100%; height: 100%;
+                    .koica_move_position{
+                        width: 500px; height: 163px; background: var(--sub_color1); border-radius: 20px;
+                        position: relative; align-items: center; text-align: center; margin-top: 60px;
+    
+                        p{
+                            color: var(--sub_color2); font-size: 25px; font-weight: bold;
+                            padding-bottom: 15px; padding-top: 42px;
+                        }
+        
+                        button{
+                            border: 0; border-radius: 28px; background: var(--main_color);
+                            padding: 4px 14px 7px 14px;
+                            span{color: var(--sub_color2); font-size: 18px;}
+                            span::after{content: url("../images/section02/button.png"); color: var(--sub_color2); padding-left: 10px;}
+                        }
+
+                        button:hover{
+                            cursor: pointer;
+                            background: var(--sub_color2);
+                            span{color: var(--main_color);}
+                            span::after{content: url("../images/section02/button2.png"); color: var(--sub_color2); padding-left: 10px;}
+                        }
+                    }
+                }
+            }
+
+            #overseas_volunteer_info, #oda_info{
+                margin-left: 29.4%;
+            }
         }
     }
 

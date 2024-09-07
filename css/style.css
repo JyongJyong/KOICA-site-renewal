@@ -176,6 +176,7 @@ header #header_box.show .search_bar {
 }
 header #header_box.show .search input[type=text] {
   border-color: var(--main_color);
+  color: var(--main_color);
 }
 header #header_box.show .search button[type=submit] {
   content: url("../images/header/search.png");
@@ -216,7 +217,7 @@ header.view1 #header_box #gnb li, header.view2 #header_box #gnb li {
   padding-right: 125px;
 }
 header.view1 #header_box #gnb li .menu_color, header.view2 #header_box #gnb li .menu_color {
-  color: var(--main_color);
+  color: #000;
 }
 header.view1 #header_box #gnb li:first-child, header.view2 #header_box #gnb li:first-child {
   padding-left: 45px;
@@ -339,23 +340,181 @@ main #main_view #scroll p {
     transform: translateY(10px);
   }
 }
-main #section02 #map_info {
-  margin-top: 150px;
+main #section01 {
+  width: 100%;
+  height: 100%;
 }
-main #section02 .search_bar {
+main #section01 #map_info_position {
+  margin-top: 140px;
+  padding-bottom: 95px;
+}
+main #section01 #map_info_position #map_info {
+  float: left;
+}
+main #section01 #map_info_position #map_info p {
+  color: var(--main_color);
+}
+main #section01 #map_info_position #map_info p:first-child {
+  font-size: 25px;
+}
+main #section01 #map_info_position #map_info p:first-child::before {
+  content: "";
+  background: url("../images/section01/airplane.png") no-repeat;
+  background-size: 25px 25px;
+}
+main #section01 #map_info_position #map_info p:last-child {
+  font-size: 20px;
+}
+main #section01 #map_info_position .search_bar {
   float: right;
 }
-main #section02 .search_bar .search input[type=text] {
-  border-color: var(--main_color);
+main #section01 #map_info_position .search_bar .search input[type=text] {
+  border: 2px solid var(--main_color);
+  border-radius: 20px;
+  font-size: 15px;
 }
-main #section02 .search_bar .search button[type=submit] {
+main #section01 #map_info_position .search_bar .search button[type=submit] {
+  color: var(--main_color);
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+main #section01 #map_info_position .search_bar .search input[type=text]::-moz-placeholder {
   color: var(--main_color);
 }
-main #section02 .search_bar .search input[type=text]::-moz-placeholder {
+main #section01 #map_info_position .search_bar .search input[type=text]::placeholder {
   color: var(--main_color);
 }
-main #section02 .search_bar .search input[type=text]::placeholder {
+main #section01 #worldmap_load {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+main #section01 #map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+main #section02 {
+  width: 100%;
+  height: 100%;
+  margin-top: 48px;
+}
+main #section02 #koica_info p {
+  font-size: 30px;
+  color: #4E4E4E;
+  font-weight: bold;
+}
+main #section02 #koica_info span {
   color: var(--main_color);
+}
+main #section02 #koica_info #koica_head_bottom {
+  margin-bottom: 20px;
+}
+main #section02 #koica_info #koica_swiper {
+  width: 1724px;
+  height: 410px;
+  overflow: hidden;
+}
+main #section02 #koica_info .koica_info_img {
+  position: relative;
+  transform: translate3d(0, 0, 0) !important;
+  transition: all 0.4s;
+}
+main #section02 #koica_info .koica_info_img img {
+  width: 1724px;
+  height: 410px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #section02 #koica_info .wrapper {
+  display: flex;
+}
+main #section02 #koica_info .koica_info_text {
+  position: absolute;
+  left: 2%;
+  top: 66%;
+  z-index: 1;
+}
+main #section02 #koica_info .koica_info_text p {
+  font-size: 30px;
+  color: var(--sub_color2);
+}
+main #section02 #koica_info .koica_info_text p:last-child {
+  font-size: 23px;
+  font-weight: normal;
+  padding-top: 30px;
+}
+main #section02 #koica_info2 {
+  margin-top: 70px;
+  width: 100%;
+  height: 100%;
+}
+main #section02 #koica_info2 .character {
+  z-index: -1;
+  transition: all 0.4s;
+}
+main #section02 #koica_info2 .ch01.move, main #section02 #koica_info2 .ch02.move, main #section02 #koica_info2 .ch03.move {
+  transform: translateY(-20px);
+}
+main #section02 #koica_info2 .koica_info_etc {
+  position: relative;
+  display: flex;
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move {
+  position: absolute;
+  top: 1px;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position {
+  width: 500px;
+  height: 163px;
+  background: var(--sub_color1);
+  border-radius: 20px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position p {
+  color: var(--sub_color2);
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-top: 42px;
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position button {
+  border: 0;
+  border-radius: 28px;
+  background: var(--main_color);
+  padding: 4px 14px 7px 14px;
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position button span {
+  color: var(--sub_color2);
+  font-size: 18px;
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position button span::after {
+  content: url("../images/section02/button.png");
+  color: var(--sub_color2);
+  padding-left: 10px;
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position button:hover {
+  cursor: pointer;
+  background: var(--sub_color2);
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position button:hover span {
+  color: var(--main_color);
+}
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position button:hover span::after {
+  content: url("../images/section02/button2.png");
+  color: var(--sub_color2);
+  padding-left: 10px;
+}
+main #section02 #koica_info2 #overseas_volunteer_info, main #section02 #koica_info2 #oda_info {
+  margin-left: 29.4%;
 }
 main #section03 {
   visibility: hidden;

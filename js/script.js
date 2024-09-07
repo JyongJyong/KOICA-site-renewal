@@ -11,6 +11,38 @@ window.addEventListener("load",function(){
         header_box.classList.remove("show");
         header_box.classList.remove("height_change");
     });
+
+    // section02 캐릭터 움직이기
+    var ch1_move_btn = document.querySelector(".move_btn1");
+    var ch1 = document.querySelector(".ch01");
+    var ch2_move_btn = document.querySelector(".move_btn2");
+    var ch2 = document.querySelector(".ch02");
+    var ch3_move_btn = document.querySelector(".move_btn3");
+    var ch3 = document.querySelector(".ch03");
+
+    ch1_move_btn.addEventListener("mouseenter",function(){
+        console.log("실행");
+        ch1.classList.add("move");
+    });
+    ch1_move_btn.addEventListener("mouseleave",function(){
+        ch1.classList.remove("move");
+    });
+
+    ch2_move_btn.addEventListener("mouseenter",function(){
+        console.log("실행");
+        ch2.classList.add("move");
+    });
+    ch2_move_btn.addEventListener("mouseleave",function(){
+        ch2.classList.remove("move");
+    });
+
+    ch3_move_btn.addEventListener("mouseenter",function(){
+        console.log("실행");
+        ch3.classList.add("move");
+    });
+    ch3_move_btn.addEventListener("mouseleave",function(){
+        ch3.classList.remove("move");
+    });
 });
 
 // 풀페이지 만들기
@@ -48,11 +80,37 @@ let full_page_swiper = new Swiper("#wrap",{
     },
 });
 
+// Section02
+let koica_info_swiper = new Swiper("#koica_swiper", {
+    wrapperClass: 'koica_wrap',
+    slideClass: 'koica_info_img',
 
+    effect : 'fade', // 페이드 효과 사용
+	loop : true, // 무한 반복
+    speed:1200,
+    spaceBetween : 0,
+
+    observer: true,
+    observerParents: true,
+    slidesPerView: 1,
+    
+
+    autoplay: {
+        delay: 3600,
+        disableOnInteraction: false,
+      },
+
+    pagination: {
+        el: ".swiper-pagination",
+        type: 'bullets',
+        clickable: true,
+    },  
+});
+
+// Footer
 let banner_swiper = new Swiper("#banner",{
     wrapperClass: 'wrap',
     slideClass: 'item',
-
     
     autoplay: {
         delay: 0, //add
