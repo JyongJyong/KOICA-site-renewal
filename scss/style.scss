@@ -106,7 +106,7 @@ header{
     #header_box.height_change{height: 440px;}
 
     
-    &.view1, &.view2{
+    &.view1, &.view2, &.view3, &.view4{
         #logo{content: url("../images/header/logo.png");}
 
         .search_bar{display: none;}
@@ -296,8 +296,50 @@ main{
         }
     }
 
-    
     #section03{
+        width: 100%;
+        a{color: #1D1D1D;}
+    }
+    .board{
+        padding-top: 240px; display: inline-block;
+        .board_menu{
+            border-bottom: 2px solid #D0D0D0; display: inline-block; padding-bottom: 10px;
+            h2{font-size: 25px; color: var(--main_color); float: left;}
+            a{font-size: 18px; color: #747474 !important;}
+            button{background: none; border: 0;}
+
+            .koica_board_top_menu{
+                display: flex; float: left; padding-left: 260px;
+                ul{display: flex;}
+                li{flex-shrink: 0; padding-left: 46px; padding-top: 5px;}
+                li:last-child{padding-right: 46px;}
+                button{padding-top: 2px;}
+            }
+        }
+
+        .board_content{
+            display: inline-block;
+            table{border-collapse: separate; border-spacing: 20px 40px;}
+            td:first-child{
+                font-size: 15px; color: var(--sub_color2); border-radius: 10px; background: var(--main_color);
+                padding: 4px 12px; margin-right: 30px;
+            }
+            th{padding-left: 20px;}
+            td:last-child{
+                padding-left: 400px;
+            }
+        }
+    }
+
+    .board2{
+        float: left;
+        #gallery{
+            display: inline-block;
+        }
+    }
+
+    
+    #section04{
         visibility: hidden;
         // KOICA 해외봉사단 국가별
         #overseas_volunteer{

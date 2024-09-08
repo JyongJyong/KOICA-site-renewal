@@ -196,52 +196,52 @@ header #header_box.show #top_menu li:last-child::after {
 header #header_box.height_change {
   height: 440px;
 }
-header.view1 #logo, header.view2 #logo {
+header.view1 #logo, header.view2 #logo, header.view3 #logo, header.view4 #logo {
   content: url("../images/header/logo.png");
 }
-header.view1 .search_bar, header.view2 .search_bar {
+header.view1 .search_bar, header.view2 .search_bar, header.view3 .search_bar, header.view4 .search_bar {
   display: none;
 }
-header.view1 #top_menu, header.view2 #top_menu {
+header.view1 #top_menu, header.view2 #top_menu, header.view3 #top_menu, header.view4 #top_menu {
   display: none;
 }
-header.view1 #header_box, header.view2 #header_box {
+header.view1 #header_box, header.view2 #header_box, header.view3 #header_box, header.view4 #header_box {
   height: 100px;
   box-shadow: 2px 3px 4px rgba(206, 206, 206, 0.5);
   background: #fff;
 }
-header.view1 #header_box #top_menu li a, header.view2 #header_box #top_menu li a {
+header.view1 #header_box #top_menu li a, header.view2 #header_box #top_menu li a, header.view3 #header_box #top_menu li a, header.view4 #header_box #top_menu li a {
   color: var(--main_color);
 }
-header.view1 #header_box #gnb li, header.view2 #header_box #gnb li {
+header.view1 #header_box #gnb li, header.view2 #header_box #gnb li, header.view3 #header_box #gnb li, header.view4 #header_box #gnb li {
   padding-right: 125px;
 }
-header.view1 #header_box #gnb li .menu_color, header.view2 #header_box #gnb li .menu_color {
+header.view1 #header_box #gnb li .menu_color, header.view2 #header_box #gnb li .menu_color, header.view3 #header_box #gnb li .menu_color, header.view4 #header_box #gnb li .menu_color {
   color: #000;
 }
-header.view1 #header_box #gnb li:first-child, header.view2 #header_box #gnb li:first-child {
+header.view1 #header_box #gnb li:first-child, header.view2 #header_box #gnb li:first-child, header.view3 #header_box #gnb li:first-child, header.view4 #header_box #gnb li:first-child {
   padding-left: 45px;
 }
-header.view1 #header_box #gnb, header.view2 #header_box #gnb {
+header.view1 #header_box #gnb, header.view2 #header_box #gnb, header.view3 #header_box #gnb, header.view4 #header_box #gnb {
   margin-top: 16px;
 }
-header.view1 #header_box .sub, header.view2 #header_box .sub {
+header.view1 #header_box .sub, header.view2 #header_box .sub, header.view3 #header_box .sub, header.view4 #header_box .sub {
   border: 0;
   display: none;
 }
-header.view1 #header_box .search input[type=text], header.view2 #header_box .search input[type=text] {
+header.view1 #header_box .search input[type=text], header.view2 #header_box .search input[type=text], header.view3 #header_box .search input[type=text], header.view4 #header_box .search input[type=text] {
   border-color: var(--main_color);
 }
-header.view1 #header_box .search button[type=submit], header.view2 #header_box .search button[type=submit] {
+header.view1 #header_box .search button[type=submit], header.view2 #header_box .search button[type=submit], header.view3 #header_box .search button[type=submit], header.view4 #header_box .search button[type=submit] {
   color: var(--main_color);
 }
-header.view1 #header_box .search input[type=text]::-moz-placeholder, header.view2 #header_box .search input[type=text]::-moz-placeholder {
+header.view1 #header_box .search input[type=text]::-moz-placeholder, header.view2 #header_box .search input[type=text]::-moz-placeholder, header.view3 #header_box .search input[type=text]::-moz-placeholder, header.view4 #header_box .search input[type=text]::-moz-placeholder {
   color: var(--main_color);
 }
-header.view1 #header_box .search input[type=text]::placeholder, header.view2 #header_box .search input[type=text]::placeholder {
+header.view1 #header_box .search input[type=text]::placeholder, header.view2 #header_box .search input[type=text]::placeholder, header.view3 #header_box .search input[type=text]::placeholder, header.view4 #header_box .search input[type=text]::placeholder {
   color: var(--main_color);
 }
-header.view1 #top_menu li:last-child::after, header.view2 #top_menu li:last-child::after {
+header.view1 #top_menu li:last-child::after, header.view2 #top_menu li:last-child::after, header.view3 #top_menu li:last-child::after, header.view4 #top_menu li:last-child::after {
   content: url("../images/header/eng_btn.png");
 }
 
@@ -517,21 +517,95 @@ main #section02 #koica_info2 #overseas_volunteer_info, main #section02 #koica_in
   margin-left: 29.4%;
 }
 main #section03 {
-  visibility: hidden;
-}
-main #section03 #overseas_volunteer {
   width: 100%;
 }
-main #section03 #overseas_volunteer .overseas_btn {
+main #section03 a {
+  color: #1D1D1D;
+}
+main .board {
+  padding-top: 240px;
+  display: inline-block;
+}
+main .board .board_menu {
+  border-bottom: 2px solid #D0D0D0;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+main .board .board_menu h2 {
+  font-size: 25px;
+  color: var(--main_color);
+  float: left;
+}
+main .board .board_menu a {
+  font-size: 18px;
+  color: #747474 !important;
+}
+main .board .board_menu button {
+  background: none;
+  border: 0;
+}
+main .board .board_menu .koica_board_top_menu {
+  display: flex;
+  float: left;
+  padding-left: 260px;
+}
+main .board .board_menu .koica_board_top_menu ul {
+  display: flex;
+}
+main .board .board_menu .koica_board_top_menu li {
+  flex-shrink: 0;
+  padding-left: 46px;
+  padding-top: 5px;
+}
+main .board .board_menu .koica_board_top_menu li:last-child {
+  padding-right: 46px;
+}
+main .board .board_menu .koica_board_top_menu button {
+  padding-top: 2px;
+}
+main .board .board_content {
+  display: inline-block;
+}
+main .board .board_content table {
+  border-collapse: separate;
+  border-spacing: 20px 40px;
+}
+main .board .board_content td:first-child {
+  font-size: 15px;
+  color: var(--sub_color2);
+  border-radius: 10px;
+  background: var(--main_color);
+  padding: 4px 12px;
+  margin-right: 30px;
+}
+main .board .board_content th {
+  padding-left: 20px;
+}
+main .board .board_content td:last-child {
+  padding-left: 400px;
+}
+main .board2 {
+  float: left;
+}
+main .board2 #gallery {
+  display: inline-block;
+}
+main #section04 {
+  visibility: hidden;
+}
+main #section04 #overseas_volunteer {
+  width: 100%;
+}
+main #section04 #overseas_volunteer .overseas_btn {
   width: 120px;
   height: 36px;
   display: inline-block;
   margin-right: 50px;
 }
-main #section03 #overseas_volunteer .overseas_btn input[type=radio] {
+main #section04 #overseas_volunteer .overseas_btn input[type=radio] {
   display: none;
 }
-main #section03 #overseas_volunteer .overseas_btn label {
+main #section04 #overseas_volunteer .overseas_btn label {
   display: block;
   border-radius: 10px;
   margin: 0 auto;
@@ -548,11 +622,11 @@ main #section03 #overseas_volunteer .overseas_btn label {
   color: var(--main_color);
   padding-right: 30px;
 }
-main #section03 #overseas_volunteer .overseas_btn input[type=radio]:checked + label {
+main #section04 #overseas_volunteer .overseas_btn input[type=radio]:checked + label {
   background: var(--main_color);
   color: var(--sub_color2);
 }
-main #section03 #overseas_volunteer .overseas_btn label:hover {
+main #section04 #overseas_volunteer .overseas_btn label:hover {
   border-color: var(--sub_color1);
   background: var(--sub_color1);
   color: var(--sub_color2);
