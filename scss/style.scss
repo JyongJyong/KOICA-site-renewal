@@ -372,9 +372,12 @@ main{
     
     #section04{
         // KOICA 해외봉사단 국가별
+        position: relative;
+        width: 100%; height: 100%;
+
         #overseas_volunteer{
             width: 100%;
-            padding-top: 160px;
+            padding-top: 160px; overflow: hidden;
 
             h2{
                 text-align: center; font-size: 30px; color: var(--main_color); font-weight: bold;
@@ -422,7 +425,7 @@ main{
         background: #F7F7F7;
 
         .container{
-            display: flex; margin-top: 75px;
+            display: flex; margin-top: 75px; margin-left: 450px;
         }
 
         .overseas_info{
@@ -437,7 +440,7 @@ main{
             p:nth-of-type(3){clear: both; font-size: 15px; color: #696969; float: left; margin-bottom: 30px;}
             button{
                 clear: both;
-                display: block; visibility: visible;
+                display: block; visibility: visible; opacity: 1;
                 border: 0; border-radius: 4px; background: var(--main_color);
                 padding: 4px 30px 7px 30px;
                 p{color: var(--sub_color2) !important; font-size: 13px !important; margin-top: 0;}
@@ -445,11 +448,33 @@ main{
             }
         }
         .swiper-slide-prev, .swiper-slide-next{
-            margin-top: 80px; padding-left: 80px; padding-right: 80px;
-            .img_filter{position: absolute; background-color: rgb(255, 255, 255, .6); z-index: 2; width: 812px; height: 308px; border-radius: 30px;}
-            p{visibility: hidden;}
-            button{visibility: hidden;}
+            margin-top: 80px; //padding-left: 248px; padding-right: 248px;
+            .img_filter{position: absolute; background-color: rgb(255, 255, 255, .6); z-index: 2;  border-radius: 30px; width: 812px; height: 308px;}
+            p{visibility: hidden; opacity: 0;}
+            button{visibility: hidden; opacity: 0;}
         }
+    }
+
+    
+    .section_pager{
+        position: absolute; text-align: center; top: 80%; left: 50%; display: flex; transform: translateX(-50%);
+        span{
+            display: block; width: 10px; height: 10px; background: #000; opacity: .3; border-radius: 50%;
+            margin: 18px 10px;
+        }
+        .swiper-pagination-bullet-active{background: var(--main_color); opacity: 1;}
+    }
+
+    .swiper-button-prev{
+        position: absolute; top: 46%; left: 27%;
+        background: url(../images/section04/prev.png) no-repeat;
+        width: 21px; height: 43px;
+    }
+
+    .swiper-button-next{
+        position: absolute; top: 46%; left: 71%;
+        background: url(../images/section04/next.png) no-repeat;
+        width: 26px; height: 43px;
     }
 }
 

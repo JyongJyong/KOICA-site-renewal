@@ -94,7 +94,6 @@ let koica_info_swiper = new Swiper("#koica_swiper", {
     observerParents: true,
     slidesPerView: 1,
     
-
     autoplay: {
         delay: 3600,
         disableOnInteraction: false,
@@ -112,23 +111,25 @@ let koica_overseas_swiper = new Swiper("#overseas_contents", {
     wrapperClass: 'container',
     slideClass: 'overseas_info',
 
-    speed:1200,
-    spaceBetween : 0,
+    spaceBetween : 120,
     loop: true,
     centeredSlides: true,
-    loopAdditionalSlides: 1,
-    spaceBetween: 100,
+    loopedSlides: 3,
+    //spaceBetween: 100,
+    slidesPerView: 2,  
+    resistanceRatio: 0,
+    
+    direction: 'horizontal',
 
-    observer: true,
-    observerParents: true,
-    slidesPerView: 'auto',
+    observer: true, 
+    observeParents: true,
 
     navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
     },
     pagination: {
-        el: ".swiper-pagination",
+        el: ".section_pager",
         clickable: true,  // 클릭시 slide 이동 여부
         type: "bullets",
     },

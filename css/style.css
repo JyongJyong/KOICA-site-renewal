@@ -679,9 +679,15 @@ main .board2 #gallery_content li.gallery_content_li p:nth-of-type(3) {
   padding-top: 25px;
   padding-bottom: 8px;
 }
+main #section04 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 main #section04 #overseas_volunteer {
   width: 100%;
   padding-top: 160px;
+  overflow: hidden;
 }
 main #section04 #overseas_volunteer h2 {
   text-align: center;
@@ -737,6 +743,7 @@ main #overseas_volunteer {
 main #overseas_volunteer .container {
   display: flex;
   margin-top: 75px;
+  margin-left: 450px;
 }
 main #overseas_volunteer .overseas_info img {
   width: 812px;
@@ -775,6 +782,7 @@ main #overseas_volunteer .swiper-slide-active button {
   clear: both;
   display: block;
   visibility: visible;
+  opacity: 1;
   border: 0;
   border-radius: 4px;
   background: var(--main_color);
@@ -791,22 +799,59 @@ main #overseas_volunteer .swiper-slide-active button p::after {
 }
 main #overseas_volunteer .swiper-slide-prev, main #overseas_volunteer .swiper-slide-next {
   margin-top: 80px;
-  padding-left: 80px;
-  padding-right: 80px;
 }
 main #overseas_volunteer .swiper-slide-prev .img_filter, main #overseas_volunteer .swiper-slide-next .img_filter {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.6);
   z-index: 2;
+  border-radius: 30px;
   width: 812px;
   height: 308px;
-  border-radius: 30px;
 }
 main #overseas_volunteer .swiper-slide-prev p, main #overseas_volunteer .swiper-slide-next p {
   visibility: hidden;
+  opacity: 0;
 }
 main #overseas_volunteer .swiper-slide-prev button, main #overseas_volunteer .swiper-slide-next button {
   visibility: hidden;
+  opacity: 0;
+}
+main .section_pager {
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+}
+main .section_pager span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  opacity: 0.3;
+  border-radius: 50%;
+  margin: 18px 10px;
+}
+main .section_pager .swiper-pagination-bullet-active {
+  background: var(--main_color);
+  opacity: 1;
+}
+main .swiper-button-prev {
+  position: absolute;
+  top: 46%;
+  left: 27%;
+  background: url(../images/section04/prev.png) no-repeat;
+  width: 21px;
+  height: 43px;
+}
+main .swiper-button-next {
+  position: absolute;
+  top: 46%;
+  left: 71%;
+  background: url(../images/section04/next.png) no-repeat;
+  width: 26px;
+  height: 43px;
 }
 
 footer {
