@@ -107,6 +107,33 @@ let koica_info_swiper = new Swiper("#koica_swiper", {
     },  
 });
 
+// Section04
+let koica_overseas_swiper = new Swiper("#overseas_contents", {
+    wrapperClass: 'container',
+    slideClass: 'overseas_info',
+
+    speed:1200,
+    spaceBetween : 0,
+    loop: true,
+    centeredSlides: true,
+    loopAdditionalSlides: 1,
+    spaceBetween: 100,
+
+    observer: true,
+    observerParents: true,
+    slidesPerView: 'auto',
+
+    navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,  // 클릭시 slide 이동 여부
+        type: "bullets",
+    },
+});
+
 // Footer
 let banner_swiper = new Swiper("#banner",{
     wrapperClass: 'wrap',
