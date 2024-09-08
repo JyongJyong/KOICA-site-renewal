@@ -523,8 +523,9 @@ main #section03 a {
   color: #1D1D1D;
 }
 main .board {
-  padding-top: 240px;
   display: inline-block;
+  width: 66%;
+  padding-top: 240px;
 }
 main .board .board_menu {
   border-bottom: 2px solid #D0D0D0;
@@ -585,7 +586,8 @@ main .board .board_content td:last-child {
   padding-left: 400px;
 }
 main .board2 {
-  float: left;
+  display: inline-block;
+  width: 28%;
 }
 main .board2 #gallery {
   display: inline-block;

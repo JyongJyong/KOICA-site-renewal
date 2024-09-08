@@ -299,9 +299,10 @@ main{
     #section03{
         width: 100%;
         a{color: #1D1D1D;}
+        //div{border: solid 1px magenta;}
     }
     .board{
-        padding-top: 240px; display: inline-block;
+        display: inline-block; width: 66%; padding-top: 240px;
         .board_menu{
             border-bottom: 2px solid #D0D0D0; display: inline-block; padding-bottom: 10px;
             h2{font-size: 25px; color: var(--main_color); float: left;}
@@ -332,7 +333,7 @@ main{
     }
 
     .board2{
-        float: left;
+        display: inline-block; width: 28%;
         #gallery{
             display: inline-block;
         }
