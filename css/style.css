@@ -522,9 +522,12 @@ main #section03 {
 main #section03 a {
   color: #1D1D1D;
 }
+main #board_flex {
+  display: flex;
+}
 main .board {
   display: inline-block;
-  width: 66%;
+  width: 56%;
   padding-top: 240px;
 }
 main .board .board_menu {
@@ -548,7 +551,7 @@ main .board .board_menu button {
 main .board .board_menu .koica_board_top_menu {
   display: flex;
   float: left;
-  padding-left: 260px;
+  padding-left: 130px;
 }
 main .board .board_menu .koica_board_top_menu ul {
   display: flex;
@@ -566,10 +569,11 @@ main .board .board_menu .koica_board_top_menu button {
 }
 main .board .board_content {
   display: inline-block;
+  overflow: hidden;
 }
 main .board .board_content table {
   border-collapse: separate;
-  border-spacing: 20px 40px;
+  border-spacing: 20px 39px;
 }
 main .board .board_content td:first-child {
   font-size: 15px;
@@ -583,14 +587,97 @@ main .board .board_content th {
   padding-left: 20px;
 }
 main .board .board_content td:last-child {
-  padding-left: 400px;
+  padding-left: 264px;
+}
+main .board #directors {
+  position: relative;
+}
+main .board #directors #directors_img {
+  width: 100%;
+  position: relative;
+}
+main .board #directors #directors_text {
+  position: absolute;
+  top: 44%;
+  right: 10%;
+}
+main .board #directors #directors_text p {
+  color: var(--sub_color2);
+}
+main .board #directors #directors_text p:nth-of-type(1) {
+  font-size: 25px;
+  font-weight: bold;
+}
+main .board #directors #directors_text p:nth-of-type(2) {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  text-align: right;
+}
+main .board #directors #directors_text p:nth-of-type(2) span {
+  font-size: 15px;
+  padding-left: 4px;
 }
 main .board2 {
   display: inline-block;
-  width: 28%;
+  width: 42%;
+  padding-top: 240px;
+  margin-left: 48px;
 }
 main .board2 #gallery {
   display: inline-block;
+  border-bottom: 2px solid #D0D0D0;
+  padding-bottom: 10px;
+}
+main .board2 #gallery h2 {
+  font-size: 25px;
+  color: var(--main_color);
+  float: left;
+}
+main .board2 #gallery button {
+  background: none;
+  border: 0;
+  padding-top: 2px;
+  padding-left: 574px;
+}
+main .board2 #gallery_content {
+  margin-top: 36px;
+  display: inline-block;
+}
+main .board2 #gallery_content ul {
+  float: left;
+}
+main .board2 #gallery_content li {
+  float: left;
+  margin-right: 49px;
+}
+main .board2 #gallery_content li:nth-of-type(2), main .board2 #gallery_content li:nth-of-type(4) {
+  margin-right: 0;
+}
+main .board2 #gallery_content li:nth-of-type(3), main .board2 #gallery_content li:nth-of-type(4) {
+  margin-top: 50px;
+}
+main .board2 #gallery_content li.gallery_content_li {
+  border: 1px solid #CBCBCB;
+}
+main .board2 #gallery_content li.gallery_content_li p:nth-of-type(1) {
+  color: var(--main_color);
+  margin-top: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+main .board2 #gallery_content li.gallery_content_li p:nth-of-type(2) {
+  color: #555555;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+main .board2 #gallery_content li.gallery_content_li p:nth-of-type(3) {
+  color: #9D9D9D;
+  font-size: 11px;
+  padding-left: 266px;
+  padding-top: 25px;
+  padding-bottom: 8px;
 }
 main #section04 {
   visibility: hidden;
