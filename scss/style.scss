@@ -201,7 +201,7 @@ main{
         width: 100%; height: 100%;
 
         #map_info_position{
-            margin-top: 140px;
+            padding-top: 140px;
             padding-bottom: 95px;
             #map_info{
                 float: left;
@@ -225,9 +225,9 @@ main{
 
     // 3번째 페이지 - 두번째 section
     #section02{
-        width: 100%; height: 100%; margin-top: 48px;;
+        width: 100%; height: 100%;
         #koica_info{
-            //margin-top: 140px;
+            padding-top: 190px;
             p{font-size: 30px; color: #4E4E4E; font-weight: bold;}
             span{color: var(--main_color);}
 
@@ -256,14 +256,14 @@ main{
         }
 
         #koica_info2{
-            margin-top: 70px; width: 100%; height: 100%;
+            padding-top: 70px; width: 100%;
             .character{z-index: -1; transition: all .4s;}
             .ch01.move, .ch02.move, .ch03.move{transform: translateY(-20px);}
             .koica_info_etc{
                 position: relative; display: flex;
                 .koica_move{
                     position: absolute; top: 1px; flex-shrink: 0;
-                    width: 100%; height: 100%;
+                    width: 100%;
                     .koica_move_position{
                         width: 500px; height: 163px; background: var(--sub_color1); border-radius: 20px;
                         position: relative; align-items: center; text-align: center; margin-top: 60px;
@@ -300,7 +300,8 @@ main{
         width: 100%;
         a{color: #1D1D1D;}
     }
-    #board_flex{display: flex;}
+
+    #board_flex{display: flex;  padding-top: 180px;}
     .board{
         display: inline-block; width: 56%; padding-top: 60px;
         .board_menu{
@@ -347,7 +348,7 @@ main{
     }
 
     .board2{
-        display: inline-block; width: 42%; padding-top: 60px; margin-left: 48px;
+        display: inline-block; width: 42%; margin-left: 48px;  padding-top: 60px; 
         #gallery{
             display: inline-block; border-bottom: 2px solid #D0D0D0; padding-bottom: 10px;
             h2{font-size: 25px; color: var(--main_color); float: left;}
@@ -373,11 +374,12 @@ main{
     #section04{
         // KOICA 해외봉사단 국가별
         position: relative;
-        width: 100%; height: 100%;
+        width: 100%; height: 100%; background: #F7F7F7;
 
         #overseas_volunteer{
             width: 100%;
-            padding-top: 160px; overflow: hidden;
+            overflow: hidden;
+            padding-top: 180px;
 
             h2{
                 text-align: center; font-size: 30px; color: var(--main_color); font-weight: bold;
@@ -385,7 +387,7 @@ main{
             }
 
             #overseas_btns{
-                text-align: center;
+                text-align: center; padding-bottom: 80px;
             }
 
             .xi-arrow-right:before{padding-left: 47px;}
@@ -421,23 +423,23 @@ main{
     }
 
     #overseas_volunteer{
-        width: 100%; height: 85%;
-        background: #F7F7F7;
+        width: 100%;
 
         .container{
-            display: flex; margin-top: 75px; margin-left: 450px;
+            display: flex; width: 100%;
         }
 
         .overseas_info{
-            img{width: 812px; height: 308px; border-radius: 30px; z-index: -1; position: relative;}
+            display: flex; width: auto;
+            img{display: block; width: 812px; height: 308px; border-radius: 30px; z-index: -1; position: relative;}
         }
 
         .swiper-slide-active{
             p{visibility: visible; margin-top: 26px;}
-            p:nth-of-type(1){font-size: 25px; color: var(--main_color); float: left;}
-            p:nth-of-type(2){font-size: 14px; color: var(--main_color); float: right}
-            p:nth-of-type(2)::before{content: url(../images/section04/flag_Cambodia.png); vertical-align: middle; padding-right: 5px;}
-            p:nth-of-type(3){clear: both; font-size: 15px; color: #696969; float: left; margin-bottom: 30px;}
+            p:nth-of-type(1){font-size: 25px; color: var(--main_color); float: left; }
+            p:nth-of-type(2){font-size: 14px; color: var(--main_color); float: right; }
+            p:nth-of-type(2)::before{content: url(../images/section04/flag_Cambodia.png); vertical-align: middle; padding-right: 5px; }
+            p:nth-of-type(3){clear: both; font-size: 15px; color: #696969; float: left; margin-bottom: 30px; width: 812px;}
             button{
                 clear: both;
                 display: block; visibility: visible; opacity: 1;
@@ -448,7 +450,7 @@ main{
             }
         }
         .swiper-slide-prev, .swiper-slide-next{
-            margin-top: 80px; //padding-left: 248px; padding-right: 248px;
+            margin-top: 80px; //margin-left: -248px; margin-right: -248px;
             .img_filter{position: absolute; background-color: rgb(255, 255, 255, .6); z-index: 2;  border-radius: 30px; width: 812px; height: 308px;}
             p{visibility: hidden; opacity: 0;}
             button{visibility: hidden; opacity: 0;}
@@ -457,7 +459,7 @@ main{
 
     
     .section_pager{
-        position: absolute; text-align: center; top: 80%; left: 50%; display: flex; transform: translateX(-50%);
+        position: absolute; text-align: center; top: 82%; left: 50%; display: flex; transform: translateX(-50%);
         span{
             display: block; width: 10px; height: 10px; background: #000; opacity: .3; border-radius: 50%;
             margin: 18px 10px;

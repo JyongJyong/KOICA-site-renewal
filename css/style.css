@@ -345,7 +345,7 @@ main #section01 {
   height: 100%;
 }
 main #section01 #map_info_position {
-  margin-top: 140px;
+  padding-top: 140px;
   padding-bottom: 95px;
 }
 main #section01 #map_info_position #map_info {
@@ -398,7 +398,9 @@ main #section01 #map {
 main #section02 {
   width: 100%;
   height: 100%;
-  margin-top: 48px;
+}
+main #section02 #koica_info {
+  padding-top: 190px;
 }
 main #section02 #koica_info p {
   font-size: 30px;
@@ -447,9 +449,8 @@ main #section02 #koica_info .koica_info_text p:last-child {
   padding-top: 30px;
 }
 main #section02 #koica_info2 {
-  margin-top: 70px;
+  padding-top: 70px;
   width: 100%;
-  height: 100%;
 }
 main #section02 #koica_info2 .character {
   z-index: -1;
@@ -467,7 +468,6 @@ main #section02 #koica_info2 .koica_info_etc .koica_move {
   top: 1px;
   flex-shrink: 0;
   width: 100%;
-  height: 100%;
 }
 main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position {
   width: 500px;
@@ -524,6 +524,7 @@ main #section03 a {
 }
 main #board_flex {
   display: flex;
+  padding-top: 180px;
 }
 main .board {
   display: inline-block;
@@ -621,8 +622,8 @@ main .board #directors #directors_text p:nth-of-type(2) span {
 main .board2 {
   display: inline-block;
   width: 42%;
-  padding-top: 60px;
   margin-left: 48px;
+  padding-top: 60px;
 }
 main .board2 #gallery {
   display: inline-block;
@@ -683,11 +684,12 @@ main #section04 {
   position: relative;
   width: 100%;
   height: 100%;
+  background: #F7F7F7;
 }
 main #section04 #overseas_volunteer {
   width: 100%;
-  padding-top: 160px;
   overflow: hidden;
+  padding-top: 180px;
 }
 main #section04 #overseas_volunteer h2 {
   text-align: center;
@@ -698,6 +700,7 @@ main #section04 #overseas_volunteer h2 {
 }
 main #section04 #overseas_volunteer #overseas_btns {
   text-align: center;
+  padding-bottom: 80px;
 }
 main #section04 #overseas_volunteer .xi-arrow-right:before {
   padding-left: 47px;
@@ -737,15 +740,17 @@ main #section04 #overseas_volunteer .overseas_btn label:hover {
 }
 main #overseas_volunteer {
   width: 100%;
-  height: 85%;
-  background: #F7F7F7;
 }
 main #overseas_volunteer .container {
   display: flex;
-  margin-top: 75px;
-  margin-left: 450px;
+  width: 100%;
+}
+main #overseas_volunteer .overseas_info {
+  display: flex;
+  width: auto;
 }
 main #overseas_volunteer .overseas_info img {
+  display: block;
   width: 812px;
   height: 308px;
   border-radius: 30px;
@@ -777,6 +782,7 @@ main #overseas_volunteer .swiper-slide-active p:nth-of-type(3) {
   color: #696969;
   float: left;
   margin-bottom: 30px;
+  width: 812px;
 }
 main #overseas_volunteer .swiper-slide-active button {
   clear: both;
@@ -819,7 +825,7 @@ main #overseas_volunteer .swiper-slide-prev button, main #overseas_volunteer .sw
 main .section_pager {
   position: absolute;
   text-align: center;
-  top: 80%;
+  top: 82%;
   left: 50%;
   display: flex;
   transform: translateX(-50%);

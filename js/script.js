@@ -111,13 +111,9 @@ let koica_overseas_swiper = new Swiper("#overseas_contents", {
     wrapperClass: 'container',
     slideClass: 'overseas_info',
 
-    spaceBetween : 120,
-    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 120,
     centeredSlides: true,
-    loopedSlides: 3,
-    //spaceBetween: 100,
-    slidesPerView: 2,  
-    resistanceRatio: 0,
     
     direction: 'horizontal',
 
