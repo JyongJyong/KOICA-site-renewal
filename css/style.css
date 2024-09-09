@@ -345,7 +345,7 @@ main #section01 {
   height: 100%;
 }
 main #section01 #map_info_position {
-  padding-top: 140px;
+  padding-top: 10%;
   padding-bottom: 95px;
 }
 main #section01 #map_info_position #map_info {
@@ -400,7 +400,7 @@ main #section02 {
   height: 100%;
 }
 main #section02 #koica_info {
-  padding-top: 190px;
+  padding-top: 12%;
 }
 main #section02 #koica_info p {
   font-size: 30px;
@@ -524,7 +524,7 @@ main #section03 a {
 }
 main #board_flex {
   display: flex;
-  padding-top: 180px;
+  padding-top: 12%;
 }
 main .board {
   display: inline-block;
@@ -690,7 +690,7 @@ main #section04 {
 main #section04 #overseas_volunteer {
   width: 100%;
   overflow: hidden;
-  padding-top: 180px;
+  padding-top: 8%;
 }
 main #section04 #overseas_volunteer h2 {
   text-align: center;
@@ -862,7 +862,7 @@ main .swiper-button-next {
 }
 
 #section05 #board_content2 {
-  padding-top: 240px;
+  padding-top: 16%;
   display: flex;
 }
 #section05 #board3 {
@@ -1027,6 +1027,99 @@ main .swiper-button-next {
   width: 775px;
   height: 179px;
   transform: scale(0.995);
+}
+
+#section06 {
+  width: 100%;
+  position: relative;
+}
+#section06 #WeKO_info {
+  padding-top: 12%;
+  padding-left: 4%;
+  padding-right: 10%;
+}
+#section06 #WeKO_header {
+  border-bottom: 2px solid #D0D0D0;
+  padding-bottom: 20px;
+}
+#section06 #WeKO_header h2 {
+  font-size: 25px;
+  color: var(--main_color);
+}
+#section06 #WeKO_header h2::before {
+  content: url("../images/section06/weco_logo.png");
+}
+#section06 #WeKO_swiper {
+  display: flex;
+  height: 100vh;
+  max-height: 611px;
+  position: relative;
+}
+#section06 #WeKO_main_swiper {
+  width: 80%;
+  margin-top: 47px;
+  width: 1082px;
+  height: 611px;
+  overflow: hidden;
+}
+#section06 #WeKO_main_swiper img {
+  width: 1082px;
+  height: 611px;
+  display: block;
+}
+#section06 #WeKO_main_swiper .container3 {
+  width: 1082px;
+  height: 611px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#section06 #WeKO_main_swiper #WeKO_main_item {
+  display: flex;
+}
+#section06 #WeKO_main_swiper #WeKO_main_item::before {
+  content: url("../images/section06/play_btn.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#section06 #WeKO_sub_swiper {
+  width: 22%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 50px;
+  margin-top: 47px;
+}
+#section06 #WeKO_sub_swiper img {
+  width: 348px;
+  height: 189px;
+  display: block;
+}
+#section06 #WeKO_sub_swiper .container3 {
+  display: flex;
+  flex-direction: column;
+}
+#section06 #WeKO_sub_swiper #WeKO_main_item {
+  height: 189px;
+  padding-top: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#section06 .swiper-button-prev {
+  position: absolute;
+  top: 4%;
+  left: 86%;
+  background: url(../images/section06/play_top_btn.png) no-repeat;
+  width: 42px;
+  height: 42px;
+}
+#section06 .swiper-button-next {
+  position: absolute;
+  top: 105%;
+  left: 86%;
+  background: url(../images/section06/play_bottom_btn.png) no-repeat;
+  width: 42px;
+  height: 42px;
 }
 
 footer {

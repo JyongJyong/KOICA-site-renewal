@@ -154,6 +154,48 @@ let popup_swiper = new Swiper("#popup_zone_contents", {
     },
 });
 
+//SECTION06
+let WeKO_sub = new Swiper("#WeKO_sub_swiper", {
+    wrapperClass: 'container3',
+    slideClass: 'WeKO_main_item',
+
+    slidesPerView: 3,
+    loop: true,
+    speed:1200,
+    spaceBetween : 30,
+    
+    direction: 'vertical',
+
+    observer: true, 
+    observeParents: true,
+    
+    navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+    },
+});
+
+
+let WeKO_main = new Swiper("#WeKO_main_swiper", {
+    wrapperClass: 'container3',
+    slideClass: 'WeKO_main_item',
+
+    slidesPerView: 'auto',
+    loop: true,
+    speed:1200,
+    spaceBetween : 0,
+    
+    direction: 'vertical',
+
+    observer: true, 
+    observeParents: true,
+
+    thumbs: {
+        swiper: WeKO_sub,
+    },
+});
+
+
 
 // Footer
 let banner_swiper = new Swiper("#banner",{
