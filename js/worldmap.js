@@ -18,7 +18,7 @@ window.addEventListener("load",function(){
 			box.style.display = "block";
 			box.style.left = btn_X+"px";
 			box.style.top = btn_Y+"px";		
-			console.log(btn_X+"/"+btn_Y);
+			console.log(btn_X+"/"+btn_Y);        
 
 			name.innerHTML = btn.dataset.name;
 			address.innerHTML = btn.dataset.address;

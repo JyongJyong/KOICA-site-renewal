@@ -106,7 +106,7 @@ header{
     #header_box.height_change{height: 440px;}
 
     
-    &.view1, &.view2, &.view3, &.view4{
+    &.view1, &.view2, &.view3, &.view4, &.view5, &.view6{
         #logo{content: url("../images/header/logo.png");}
 
         .search_bar{display: none;}
@@ -326,9 +326,9 @@ main{
                 font-size: 15px; color: var(--sub_color2); border-radius: 10px; background: var(--main_color);
                 padding: 4px 12px; margin-right: 30px;
             }
-            th{padding-left: 20px;}
+            th{padding-left: 20px; text-align: left;}
             td:last-child{
-                padding-left: 264px;
+                padding-left: 140px;
             }
         }
 
@@ -339,7 +339,7 @@ main{
             }
             #directors_text{
                 position: absolute;
-                top: 44%; right: 10%;
+                top: 44%; right: 10%; 
                 p{color: var(--sub_color2);}
                 p:nth-of-type(1){font-size: 25px; font-weight: bold;}
                 p:nth-of-type(2){font-size: 20px; span{font-size: 15px; padding-left: 4px;} font-weight: bold; padding-top: 20px; text-align: right;}
@@ -477,6 +477,106 @@ main{
         position: absolute; top: 46%; left: 71%;
         background: url(../images/section04/next.png) no-repeat;
         width: 26px; height: 43px;
+    }
+}
+
+// 4번째 페이지 - 다섯번째 section
+#section05{
+    #board_content2{
+        padding-top: 240px; display: flex;
+    }
+
+    #board3{
+        display: inline-block; width: 50%;
+    }
+
+    .board_job_menu{
+        display: inline-block; padding-bottom: 9px;
+        border-bottom: 2px solid #D0D0D0;//padding-bottom: 10px;
+        h2{font-size: 25px; color: var(--main_color); float: left;}
+        button{background: none; border: 0; padding-left: 720px; padding-top: 10px;}
+    }
+
+    .board_jog_first_content{
+        padding-top: 46px; display: flex; padding-bottom: 46px;
+
+        .first_contents{
+            display: block; margin-left:20px;
+            p:nth-of-type(1){
+                font-size: 18px; color: var(--sub_color2); border-radius: 20px; background: var(--main_color);
+                padding: 4px 12px; margin-right: 30px; display: inline-block; font-weight: bold;
+            }
+            p:nth-of-type(2){color: #1D1D1D; font-size: 17px; padding-top: 30px;}
+            p:nth-of-type(3){
+                color: #6F6F6F; font-size: 15px; padding-top: 10px; padding-bottom: 20px;
+            }
+        }
+
+        border-bottom: 1px solid #D0D0D0;
+    }
+
+    .board_job_content{
+        //display: inline-block; overflow: hidden;
+        .board_job_table{border-collapse: separate; border-spacing: 20px 39px;}
+        td:first-child{
+            font-size: 15px; color: var(--sub_color2); border-radius: 15px; background: var(--main_color);
+            padding: 4px 12px; margin-right: 30px; font-weight: bold;
+        }
+        th{padding-left: 20px; a{color: #1D1D1D;} text-align: left;}
+        td:last-child{
+            padding-left: 146px;
+        }
+
+        td.notice_end{background: #7E7E7E;}
+    }
+
+    #board_right{display: flex;  flex-wrap: wrap; width: 40%; }
+
+    #board4{
+        margin-left: 60px; flex-shrink: 0;
+
+        .sns_menu{
+            border-bottom: 2px solid #D0D0D0; padding-bottom: 36px;
+            h2{font-size: 25px; color: var(--main_color); float: left;}
+            #sns_menu_icon{float: right;}
+            button{background: none; border: 0; a{color: #707070;}}
+            button:hover{a{color: var(--main_color);}}
+        }
+
+        .sns_contents{
+            .contents_imgs{
+                display: flex; padding-top: 40px;
+                img{width: 239px; height: 239px;}
+                li{margin-right: 29px;}
+                li:last-child{margin-right: 0;}
+            }
+        }
+    }
+
+    #board5{
+        display: inline-block;
+        margin-left: 60px;
+        #popup_zone{
+            border-bottom: 2px solid #D0D0D0;
+            h2{font-size: 25px; color: var(--main_color); float: left; margin-top: 40px;}
+            button{
+                display: inline-block; background: none; border: 0; padding-left: 600px; padding-bottom: 10px;
+                margin-top: 43px;
+            }
+        }
+
+        #popup_zone_contents{
+            margin-top: 36px; width: 775px; height: 179px; overflow: hidden;
+            //.container2{width: 775px; height: 179px; overflow: hidden; flex-shrink: 0;}
+            .container2{display: flex;}
+            .popup_info{
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            img{width: 775px; height: 179px; transform: scale(.995);}
+        }
     }
 }
 

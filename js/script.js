@@ -97,7 +97,7 @@ let koica_info_swiper = new Swiper("#koica_swiper", {
     autoplay: {
         delay: 3600,
         disableOnInteraction: false,
-      },
+    },
 
     pagination: {
         el: ".swiper-pagination",
@@ -114,6 +114,7 @@ let koica_overseas_swiper = new Swiper("#overseas_contents", {
     slidesPerView: 'auto',
     spaceBetween: 120,
     centeredSlides: true,
+    loop: false,
     
     direction: 'horizontal',
 
@@ -130,6 +131,29 @@ let koica_overseas_swiper = new Swiper("#overseas_contents", {
         type: "bullets",
     },
 });
+
+// SECTION05
+let popup_swiper = new Swiper("#popup_zone_contents", {
+    wrapperClass: 'container2',
+    slideClass: 'popup_info',
+
+    slidesPerView: 'auto',
+    loop: true,
+    speed:1200,
+    spaceBetween : 0,
+    
+    direction: 'horizontal',
+
+    observer: true, 
+    observeParents: true,
+
+    
+    autoplay: {
+        delay: 3600,
+        disableOnInteraction: false,
+    },
+});
+
 
 // Footer
 let banner_swiper = new Swiper("#banner",{
