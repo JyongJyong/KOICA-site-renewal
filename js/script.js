@@ -145,11 +145,6 @@ let koica_overseas_swiper = new Swiper("#overseas_contents", {
     },
 });
 
-main_swiper.on('slideChangeTransitionEnd', function () {
-    koica_overseas_swiper.slideTo(0);
-    //header[0].classList.replace("view"+ this.activeIndex);
-});
-
 // SECTION05
 let popup_swiper = new Swiper("#popup_zone_contents", {
     wrapperClass: 'container2',
