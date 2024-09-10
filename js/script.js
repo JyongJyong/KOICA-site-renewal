@@ -1,3 +1,4 @@
+
 window.addEventListener("load",function(){
     var header_box = document.getElementById("header_box");
     var on_box = document.querySelector("#gnb ul");
@@ -50,6 +51,8 @@ var header = document.getElementsByTagName("header")[0];
 var prevClass = null;
 var activeClass = null;
 
+var top_button = document.getElementById("top_button");
+
 let full_page_swiper = new Swiper("#wrap",{
     wrapperClass: 'container',
     slideClass: 'sec',
@@ -76,8 +79,13 @@ let full_page_swiper = new Swiper("#wrap",{
             activeClass = "view" + this.activeIndex;
             header.classList.replace(prevClass, activeClass);
             prevClass = activeClass;
-        }
+        },
     },
+});
+
+top_button.addEventListener("click", function(){
+    console.log("실행");
+    full_page_swiper.slideTo(0);
 });
 
 // Section02
@@ -121,6 +129,11 @@ let koica_overseas_swiper = new Swiper("#overseas_contents", {
     observer: true, 
     observeParents: true,
 
+    autoplay: {
+        delay: 3600,
+        disableOnInteraction: false,
+    },
+
     navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
@@ -130,6 +143,11 @@ let koica_overseas_swiper = new Swiper("#overseas_contents", {
         clickable: true,  // 클릭시 slide 이동 여부
         type: "bullets",
     },
+});
+
+main_swiper.on('slideChangeTransitionEnd', function () {
+    koica_overseas_swiper.slideTo(0);
+    //header[0].classList.replace("view"+ this.activeIndex);
 });
 
 // SECTION05
@@ -212,4 +230,41 @@ let banner_swiper = new Swiper("#banner",{
     loopAdditionalSlides: 1,
     slidesPerView: 5,
     centeredSlides: false,
+});
+
+// worldmap
+window.addEventListener("load",function(){
+	var btns = document.querySelectorAll("#worldmap_load span");
+	var box = document.querySelector("#info_box");
+	var name = box.querySelector(".country_name");
+	var address = box.querySelector(".address");
+	var phone = box.querySelector(".phone_number");
+	var fax = box.querySelector(".fax_number");
+	var email = box.querySelector(".email");
+	var timer;
+
+	btns.forEach((btn)=>{
+		btn.addEventListener("mouseover",function(){
+			var btn_X = btn.offsetLeft;	
+			var btn_Y = btn.offsetTop;
+			box.style.display = "block";
+			box.style.left = btn_X+"px";
+			box.style.top = btn_Y+"px";		
+
+            console.log(btn_X);
+
+			name.innerHTML = btn.dataset.name;
+			address.innerHTML = btn.dataset.address;
+			phone.innerHTML = btn.dataset.phone;
+			fax.innerHTML = btn.dataset.fax;
+			email.innerHTML = email.dataset.email;			
+
+			clearTimeout(timer);
+		});
+		btn.addEventListener("mouseout",function(){
+			timer = setTimeout(function(){
+				box.style.display = "none";
+			},300);
+		});
+	});
 });

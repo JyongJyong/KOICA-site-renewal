@@ -199,6 +199,9 @@ header #header_box.height_change {
 header.view1 #logo, header.view2 #logo, header.view3 #logo, header.view4 #logo, header.view5 #logo, header.view6 #logo {
   content: url("../images/header/logo.png");
 }
+header.view1 #logo, header.view2 #logo, header.view3 #logo, header.view4 #logo, header.view5 #logo, header.view6 #logo {
+  margin-right: 88px;
+}
 header.view1 .search_bar, header.view2 .search_bar, header.view3 .search_bar, header.view4 .search_bar, header.view5 .search_bar, header.view6 .search_bar {
   display: none;
 }
@@ -214,10 +217,13 @@ header.view1 #header_box #top_menu li a, header.view2 #header_box #top_menu li a
   color: var(--main_color);
 }
 header.view1 #header_box #gnb li, header.view2 #header_box #gnb li, header.view3 #header_box #gnb li, header.view4 #header_box #gnb li, header.view5 #header_box #gnb li, header.view6 #header_box #gnb li {
-  padding-right: 125px;
+  padding-right: 139px;
 }
 header.view1 #header_box #gnb li .menu_color, header.view2 #header_box #gnb li .menu_color, header.view3 #header_box #gnb li .menu_color, header.view4 #header_box #gnb li .menu_color, header.view5 #header_box #gnb li .menu_color, header.view6 #header_box #gnb li .menu_color {
   color: #000;
+}
+header.view1 #header_box #gnb li:last-child, header.view2 #header_box #gnb li:last-child, header.view3 #header_box #gnb li:last-child, header.view4 #header_box #gnb li:last-child, header.view5 #header_box #gnb li:last-child, header.view6 #header_box #gnb li:last-child {
+  padding-right: 0;
 }
 header.view1 #header_box #gnb li:first-child, header.view2 #header_box #gnb li:first-child, header.view3 #header_box #gnb li:first-child, header.view4 #header_box #gnb li:first-child, header.view5 #header_box #gnb li:first-child, header.view6 #header_box #gnb li:first-child {
   padding-left: 45px;
@@ -316,6 +322,7 @@ main #main_view span {
   top: 52%;
   text-align: center;
   line-height: 30px;
+  font-weight: 100;
 }
 main #main_view #scroll {
   z-index: 2;
@@ -350,26 +357,33 @@ main #section01 #map_info_position {
 }
 main #section01 #map_info_position #map_info {
   float: left;
+  position: relative;
 }
 main #section01 #map_info_position #map_info p {
   color: var(--main_color);
 }
 main #section01 #map_info_position #map_info p:first-child {
   font-size: 25px;
+  font-weight: bold;
 }
 main #section01 #map_info_position #map_info p:first-child::before {
   content: "";
   background: url("../images/section01/airplane.png") no-repeat;
   background-size: 25px 25px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
 }
 main #section01 #map_info_position #map_info p:last-child {
   font-size: 20px;
+  padding-top: 12px;
 }
 main #section01 #map_info_position .search_bar {
   float: right;
 }
 main #section01 #map_info_position .search_bar .search input[type=text] {
   border: 2px solid var(--main_color);
+  color: var(--main_color);
   border-radius: 20px;
   font-size: 15px;
 }
@@ -380,15 +394,99 @@ main #section01 #map_info_position .search_bar .search button[type=submit] {
   right: 10px;
 }
 main #section01 #map_info_position .search_bar .search input[type=text]::-moz-placeholder {
-  color: var(--main_color);
+  color: #BFBFBF;
 }
 main #section01 #map_info_position .search_bar .search input[type=text]::placeholder {
-  color: var(--main_color);
+  color: #BFBFBF;
 }
 main #section01 #worldmap_load {
   position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
+  width: 1561px;
+  height: 771px;
+  margin: 0 auto;
+  transform: scale(80%);
+}
+main #section01 #worldmap_load img[src$=svg] {
+  pointer-events: none;
+}
+main #section01 #worldmap_load span {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #004A9B;
+}
+main #section01 #worldmap_load .dot1 {
+  top: 377.5px;
+  left: 262.2px;
+}
+main #section01 #worldmap_load .dot2 {
+  top: 409.5px;
+  left: 278.5px;
+}
+main #section01 #worldmap_load .dot3 {
+  top: 459.5px;
+  left: 410px;
+}
+main #section01 #worldmap_load .dot4 {
+  top: 492px;
+  left: 410px;
+}
+main #section01 #worldmap_load .dot5 {
+  top: 509px;
+  left: 376.5px;
+}
+main #section01 #worldmap_load .dot6 {
+  top: 557.6px;
+  left: 410px;
+}
+main #section01 #worldmap_load .dot7 {
+  top: 573.5px;
+  left: 459px;
+}
+main #section01 #worldmap_load .dot8 {
+  top: 607px;
+  left: 475px;
+}
+main #section01 #worldmap_load .dot1:hover, main #section01 #worldmap_load .dot2:hover, main #section01 #worldmap_load .dot3:hover, main #section01 #worldmap_load .dot4:hover, main #section01 #worldmap_load .dot5:hover, main #section01 #worldmap_load .dot6:hover, main #section01 #worldmap_load .dot7:hover, main #section01 #worldmap_load .dot8:hover {
+  background-color: red;
+}
+main #section01 #worldmap_load #info_box {
+  width: 201px;
+  height: 157px;
+  position: absolute;
+  color: #030303;
+  background: url("../images/nara_btn.png");
+  display: none;
+  transform: translate(-50%, -100%);
+  z-index: 1;
+  font-size: 20px;
+}
+main #section01 #worldmap_load .country_name {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+main #section01 #worldmap_load .office_name {
+  font-size: 12px;
+  margin-left: 10px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+main #section01 #worldmap_load .address {
+  font-size: 10px;
+  margin-left: 10px;
+}
+main #section01 #worldmap_load .phone_number {
+  font-size: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+main #section01 #worldmap_load .email {
+  font-size: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 main #section01 #map {
   position: absolute;
@@ -400,18 +498,22 @@ main #section02 {
   height: 100%;
 }
 main #section02 #koica_info {
-  padding-top: 12%;
+  padding-top: 11%;
 }
 main #section02 #koica_info p {
   font-size: 30px;
   color: #4E4E4E;
   font-weight: bold;
 }
+main #section02 #koica_info p:last-child {
+  line-height: 35px;
+  font-weight: 200;
+}
 main #section02 #koica_info span {
   color: var(--main_color);
 }
 main #section02 #koica_info #koica_head_bottom {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 main #section02 #koica_info #koica_swiper {
   width: 1724px;
@@ -433,10 +535,17 @@ main #section02 #koica_info .koica_info_img img {
 main #section02 #koica_info .wrapper {
   display: flex;
 }
+main #section02 #koica_info .koica_info_img_gradient {
+  width: 1724px;
+  height: 410px;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 50%, transparent);
+  position: absolute;
+}
 main #section02 #koica_info .koica_info_text {
   position: absolute;
   left: 2%;
-  top: 66%;
+  top: 60%;
   z-index: 1;
 }
 main #section02 #koica_info .koica_info_text p {
@@ -447,17 +556,21 @@ main #section02 #koica_info .koica_info_text p:last-child {
   font-size: 23px;
   font-weight: normal;
   padding-top: 30px;
+  padding-bottom: 39px;
 }
 main #section02 #koica_info2 {
   padding-top: 70px;
-  width: 100%;
+  width: 97%;
 }
 main #section02 #koica_info2 .character {
   z-index: -1;
   transition: all 0.4s;
 }
 main #section02 #koica_info2 .ch01.move, main #section02 #koica_info2 .ch02.move, main #section02 #koica_info2 .ch03.move {
-  transform: translateY(-20px);
+  transform: translateY(-34px);
+}
+main #section02 #koica_info2 img {
+  padding-left: 25px;
 }
 main #section02 #koica_info2 .koica_info_etc {
   position: relative;
@@ -513,8 +626,11 @@ main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position bu
   color: var(--sub_color2);
   padding-left: 10px;
 }
+main #section02 #koica_info2 .koica_info_etc .koica_move .koica_move_position span {
+  font-weight: bold;
+}
 main #section02 #koica_info2 #overseas_volunteer_info, main #section02 #koica_info2 #oda_info {
-  margin-left: 29.4%;
+  margin-left: 29%;
 }
 main #section03 {
   width: 100%;
@@ -534,12 +650,13 @@ main .board {
 main .board .board_menu {
   border-bottom: 2px solid #D0D0D0;
   display: inline-block;
-  padding-bottom: 10px;
 }
 main .board .board_menu h2 {
   font-size: 25px;
   color: var(--main_color);
   float: left;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 main .board .board_menu a {
   font-size: 18px;
@@ -568,6 +685,28 @@ main .board .board_menu .koica_board_top_menu li:last-child {
 main .board .board_menu .koica_board_top_menu button {
   padding-top: 2px;
 }
+main .board .board_menu .koica_board_btn {
+  padding-left: 43px;
+}
+main .board .board_menu .koica_board_btn input[type=radio] {
+  display: none;
+}
+main .board .board_menu .koica_board_btn label {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 17px;
+  line-height: 34px;
+  color: #030303;
+}
+main .board .board_menu .koica_board_btn label:last-child {
+  padding-right: 10px;
+}
+main .board .board_menu .koica_board_btn input[type=radio]:checked + label {
+  color: var(--main_color);
+  border-bottom: 2px solid var(--main_color);
+  font-weight: bold;
+}
 main .board .board_content {
   display: inline-block;
   overflow: hidden;
@@ -579,17 +718,19 @@ main .board .board_content table {
 main .board .board_content td:first-child {
   font-size: 15px;
   color: var(--sub_color2);
-  border-radius: 10px;
+  border-radius: 100px;
   background: var(--main_color);
-  padding: 4px 12px;
+  padding: 5px 22px;
   margin-right: 30px;
 }
 main .board .board_content th {
   padding-left: 20px;
   text-align: left;
+  font-weight: bold;
 }
 main .board .board_content td:last-child {
-  padding-left: 140px;
+  padding-left: 227px;
+  color: #9b9b9b;
 }
 main .board #directors {
   position: relative;
@@ -635,6 +776,8 @@ main .board2 #gallery h2 {
   font-size: 25px;
   color: var(--main_color);
   float: left;
+  font-weight: bold;
+  letter-spacing: 1;
 }
 main .board2 #gallery button {
   background: none;
@@ -643,7 +786,7 @@ main .board2 #gallery button {
   padding-left: 574px;
 }
 main .board2 #gallery_content {
-  margin-top: 36px;
+  margin-top: 50px;
   display: inline-block;
 }
 main .board2 #gallery_content ul {
@@ -670,7 +813,7 @@ main .board2 #gallery_content li.gallery_content_li p:nth-of-type(1) {
 }
 main .board2 #gallery_content li.gallery_content_li p:nth-of-type(2) {
   color: #555555;
-  font-size: 15px;
+  font-size: 13px;
   padding-left: 10px;
   padding-top: 10px;
 }
@@ -757,6 +900,8 @@ main #overseas_volunteer .overseas_info img {
   border-radius: 30px;
   z-index: -1;
   position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main #overseas_volunteer .swiper-slide-active p {
   visibility: visible;
@@ -766,6 +911,7 @@ main #overseas_volunteer .swiper-slide-active p:nth-of-type(1) {
   font-size: 25px;
   color: var(--main_color);
   float: left;
+  font-weight: bold;
 }
 main #overseas_volunteer .swiper-slide-active p:nth-of-type(2) {
   font-size: 14px;
@@ -784,6 +930,7 @@ main #overseas_volunteer .swiper-slide-active p:nth-of-type(3) {
   float: left;
   margin-bottom: 30px;
   width: 812px;
+  line-height: 25px;
 }
 main #overseas_volunteer .swiper-slide-active button {
   clear: both;
@@ -878,6 +1025,8 @@ main .swiper-button-next {
   font-size: 25px;
   color: var(--main_color);
   float: left;
+  font-weight: bold;
+  letter-spacing: 1;
 }
 #section05 .board_job_menu button {
   background: none;
@@ -900,7 +1049,7 @@ main .swiper-button-next {
   color: var(--sub_color2);
   border-radius: 20px;
   background: var(--main_color);
-  padding: 4px 12px;
+  padding: 6px 25px;
   margin-right: 30px;
   display: inline-block;
   font-weight: bold;
@@ -915,6 +1064,7 @@ main .swiper-button-next {
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 20px;
+  line-height: 18px;
 }
 #section05 .board_job_content .board_job_table {
   border-collapse: separate;
@@ -925,7 +1075,7 @@ main .swiper-button-next {
   color: var(--sub_color2);
   border-radius: 15px;
   background: var(--main_color);
-  padding: 4px 12px;
+  padding: 5px 22px !important;
   margin-right: 30px;
   font-weight: bold;
 }
@@ -937,7 +1087,8 @@ main .swiper-button-next {
   color: #1D1D1D;
 }
 #section05 .board_job_content td:last-child {
-  padding-left: 146px;
+  padding-left: 120px;
+  color: #9D9D9D;
 }
 #section05 .board_job_content td.notice_end {
   background: #7E7E7E;
@@ -959,18 +1110,28 @@ main .swiper-button-next {
   font-size: 25px;
   color: var(--main_color);
   float: left;
+  font-weight: bold;
+  letter-spacing: 1;
 }
 #section05 #board4 .sns_menu #sns_menu_icon {
   float: right;
+  display: flex;
 }
-#section05 #board4 .sns_menu button {
-  background: none;
-  border: 0;
+#section05 #board4 .sns_menu .sns_btn input[type=radio] {
+  display: none;
 }
-#section05 #board4 .sns_menu button a {
+#section05 #board4 .sns_menu .sns_btn label {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 17px;
+  line-height: 34px;
   color: #707070;
 }
-#section05 #board4 .sns_menu button:hover a {
+#section05 #board4 .sns_menu .sns_btn label:last-child {
+  padding-right: 10px;
+}
+#section05 #board4 .sns_menu .sns_btn input[type=radio]:checked + label {
   color: var(--main_color);
 }
 #section05 #board4 .sns_contents .contents_imgs {
@@ -993,12 +1154,15 @@ main .swiper-button-next {
 }
 #section05 #board5 #popup_zone {
   border-bottom: 2px solid #D0D0D0;
+  padding-bottom: 6px;
 }
 #section05 #board5 #popup_zone h2 {
   font-size: 25px;
   color: var(--main_color);
   float: left;
   margin-top: 40px;
+  font-weight: bold;
+  letter-spacing: 1;
 }
 #section05 #board5 #popup_zone button {
   display: inline-block;
@@ -1045,9 +1209,11 @@ main .swiper-button-next {
 #section06 #WeKO_header h2 {
   font-size: 25px;
   color: var(--main_color);
+  font-weight: bold;
 }
 #section06 #WeKO_header h2::before {
   content: url("../images/section06/weco_logo.png");
+  padding-right: 20px;
 }
 #section06 #WeKO_swiper {
   display: flex;
@@ -1058,6 +1224,7 @@ main .swiper-button-next {
 #section06 #WeKO_main_swiper {
   width: 80%;
   margin-top: 47px;
+  position: relative;
   width: 1082px;
   height: 611px;
   overflow: hidden;
@@ -1073,14 +1240,16 @@ main .swiper-button-next {
   display: flex;
   flex-wrap: wrap;
 }
-#section06 #WeKO_main_swiper #WeKO_main_item {
+#section06 #WeKO_main_swiper .WeKO_main_item {
   display: flex;
 }
-#section06 #WeKO_main_swiper #WeKO_main_item::before {
+#section06 #WeKO_main_swiper .swiper-slide-active::before {
   content: url("../images/section06/play_btn.png");
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: calc(50% - 51px);
+  width: 98px;
+  height: 98px;
+  padding-top: 23%;
 }
 #section06 #WeKO_sub_swiper {
   width: 22%;
@@ -1233,4 +1402,67 @@ footer #wa_mark li:last-child {
 
 .pager span.active {
   opacity: 1;
+}
+
+#quickmenu {
+  width: 50px;
+  position: fixed;
+  right: 3%;
+  top: 82%;
+}
+#quickmenu #quickmenu_hamburgerbar {
+  position: relative;
+  background-color: var(--main_color);
+  padding: 16px 16px;
+  border-radius: 50%;
+  color: var(--sub_color2);
+  cursor: pointer;
+}
+#quickmenu #quickmenu_hamburger:hover {
+  background-color: #133792;
+}
+#quickmenu #quickmenu_content {
+  position: absolute;
+  top: -978%;
+}
+#quickmenu #quickmenu_content ul {
+  display: flex;
+  flex-direction: column;
+}
+#quickmenu #quickmenu_content li {
+  padding-bottom: 7px;
+}
+#quickmenu li {
+  font-size: 12px;
+  color: #606060;
+}
+
+#top_button {
+  position: absolute;
+  top: 90%;
+  right: 3%;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+#top_button p {
+  position: relative;
+  background-color: var(--main_color);
+  padding: 16px 16px;
+  border-radius: 50%;
+}
+#top_button p:hover {
+  background-color: #133792;
+}
+#top_button p:hover img {
+  animation: topbtn_ani 0.8s ease-in-out infinite;
+}
+@keyframes topbtn_ani {
+  0% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-2px);
+    opacity: 1;
+  }
 }

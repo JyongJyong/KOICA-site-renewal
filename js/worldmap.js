@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-	var btns = document.querySelectorAll(".cls-2");
+	var btns = document.querySelectorAll("#worldmap_load span");
 	var box = document.querySelector("#info_box");
 	var name = box.querySelector(".country_name");
 	var address = box.querySelector(".address");
