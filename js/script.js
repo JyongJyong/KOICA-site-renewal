@@ -59,7 +59,12 @@ let full_page_swiper = new Swiper("#wrap",{
 
     direction: 'vertical',
 
-    mousewheel: true, // 마우스휠의 동작으로 화면전환
+    slidesPerView: "auto",
+
+    mousewheel: {
+        enabled:true, // 마우스휠의 동작으로 화면전환
+        releaseOnEdges: true,
+    },
     speed: 800, // 화면전환시간
 
     pagination:{

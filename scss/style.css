@@ -467,15 +467,12 @@ main #section01 #worldmap_load .country_name {
   margin-top: 5px;
   margin-left: 10px;
   font-weight: bold;
-  border-bottom: 2px solid red;
-  display: inline-block;
-  padding-top: 10px;
 }
 main #section01 #worldmap_load .office_name {
   font-size: 12px;
   margin-left: 10px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 2px;
 }
 main #section01 #worldmap_load .address {
   font-size: 10px;
@@ -1019,7 +1016,7 @@ main .swiper-button-next {
 }
 
 #section05 #board_content2 {
-  padding-top: 15%;
+  padding-top: 16%;
   display: flex;
 }
 #section05 #board3 {
@@ -1304,7 +1301,6 @@ main .swiper-button-next {
 footer {
   width: 100%;
   position: relative;
-  height: 420px !important;
 }
 footer #footer_background {
   height: 420px;
@@ -1413,10 +1409,6 @@ footer #wa_mark li:last-child {
 
 .pager span.active {
   opacity: 1;
-}
-
-.pager span:last-child {
-  display: none;
 }
 
 #quickmenu {
